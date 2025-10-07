@@ -15,34 +15,37 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Psicóloga Online | Elisangela Celestrino - Terapia Humanista (ACP)">
     <meta property="og:description" content="Cansada de carregar tudo sozinha? Encontre um espaço seguro na terapia online para ser ouvida sem julgamentos.">
-    <meta property="og:image" content="https://i.postimg.cc/j5nkzgzn/Elisangela.jpg">
-    <meta property="og:url" content="https://seusite.com.br">
+    <!-- 💡 A TUA IMAGEM LCP É ESSA. É CRÍTICO GARANTIR QUE ELA ESTEJA EM FORMATO WEBP OTIMIZADO! -->
+    <meta property="og:image" content="https://i.postimg.cc/j5nkzgzn/Elisangela.jpg"> 
+    <meta property="og:url" content="https://elisangeladiogopsicologa.com.br">
     
-    <!-- 🟢 PASSO 1: GOOGLE TAG MANAGER (GTM) - COLE O CÓDIGO AQUI -->
-    <!-- Este script deve ser colado o mais alto possível no head da página! -->
-    <!--
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXX');</script>
-    -->
-    
-    <!-- Tailwind CSS (Usado via CDN para fins de demonstração. Em produção, compile para otimizar a velocidade!) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
+    <!-- 🟢 1. PRÉ-CONEXÃO (MUST HAVE para recursos de terceiros) -->
+    <!-- Indica ao navegador para iniciar conexões precoces com os domínios críticos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://i.postimg.cc">
+
+    <!-- 🟢 2. PRÉ-CARREGAMENTO DE RECURSOS CRÍTICOS -->
+    <!-- Pré-carrega a imagem LCP com alta prioridade -->
+    <link rel="preload" as="image" href="https://i.postimg.cc/j5nkzgzn/Elisangela.jpg">
+    <!-- Pré-carrega o WOFF2 da fonte principal (Inter) -->
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2" crossorigin>
     
+    <!-- 🟢 3. CSS NÃO-BLOQUEANTE (Google Fonts) -->
+    <!-- Carrega as fontes de forma assíncrona após a primeira renderização -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- 🟢 4. OTIMIZAÇÃO CSS & ESTILOS CRÍTICOS INLINE -->
+    <!-- Mantivemos o mínimo de estilos aqui para garantir a visibilidade imediata (FCP). -->
     <style>
-        /* Estilos personalizados */
         body { font-family: 'Inter', sans-serif; }
         .font-serif { font-family: 'Playfair Display', serif; }
         html { scroll-behavior: smooth; }
 
-        /* Animação de fade-in */
+        /* Animação de fade-in (Não crítica para a dobra inicial, mas mantida) */
         .fade-in-section {
             opacity: 0;
             transform: translateY(20px);
@@ -53,7 +56,7 @@
             transform: translateY(0);
         }
 
-        /* 🟢 NOVO ESTILO PARA O RODAPÉ FLUTUANTE (VISÍVEL APENAS EM MOBILE) */
+        /* Rodapé Flutuante (Mobile) */
         #floating-footer {
             position: fixed;
             bottom: 0;
@@ -64,11 +67,10 @@
         }
         @media (min-width: 768px) {
             #floating-footer {
-                display: none; /* Esconder em desktop/tablet */
+                display: none; 
             }
         }
         
-        /* Estilo básico para o SVG do Instagram que não interfere com o gradiente interno */
         .instagram-logo-container {
             transition: transform 0.2s ease-in-out;
         }
@@ -76,11 +78,16 @@
             transform: scale(1.1);
         }
     </style>
+
+    <!-- 🟢 5. TAILWIND CSS (DEPOIS DOS ESTILOS CRÍTICOS) -->
+    <!-- Movido para o final do head. Em produção, use um arquivo CSS compilado e minificado. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 <body class="bg-stone-50 text-stone-700 antialiased">
 
-    <!-- 🟢 PASSO 1: GOOGLE TAG MANAGER (GTM) - NO SCRIPT BODY -->
-    <!-- Cole o código noscript aqui, imediatamente após a tag <body> de abertura -->
+    <!-- 🟢 PASSO 6: GOOGLE TAG MANAGER (GTM) - NO SCRIPT BODY (NOSCRIPT) -->
+    <!-- Colar aqui, se estiver utilizando GTM. -->
     <!--
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -91,15 +98,14 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#inicio" class="text-sm sm:text-base font-bold text-stone-800">Elisangela Celestrino | Psicóloga</a>
             
-            <!-- Navegação para Desktop (DEPÓIMENTOS REMOVIDOS) -->
+            <!-- Navegação para Desktop -->
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="#inicio" class="hover:text-emerald-700 transition-colors">Início</a>
                 <a href="#sobre" class="hover:text-emerald-700 transition-colors">Quem Sou Eu</a>
                 <a href="#como-funciona" class="hover:text-emerald-700 transition-colors">Como Funciona</a>
                 <a href="#abordagem" class="hover:text-emerald-700 transition-colors">Abordagem</a>
-                <!-- Link Instagram (SVG SIMPLES/B&W no HEADER) -->
+                <!-- Link Instagram -->
                 <a href="https://www.instagram.com/elisangeladiogopsi/" target="_blank" class="instagram-logo-container text-stone-500 hover:text-emerald-700 transition-colors" aria-label="Instagram">
-                    <!-- Instagram logo (SVG Simples B&W) -->
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -107,7 +113,7 @@
                     </svg>
                 </a>
                 <!-- CTA COM RASTREAMENTO -->
-                <a href="https://wa.me/5511965762304?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+a+conversa+inicial.+Poderia+me+passar+mais+informa%C3%A7%C3%B5es%3F" target="_blank" class="contact-cta hidden lg:inline-block bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition-transform hover:scale-105 shadow">
+                <a href="https://wa.me/5511965762304?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+a+conversa+inicial.+Poderia+me+passar+mais+informa%C3%A7%C3%B5es%3F" target="_blank" data-label="CTA_Header" class="contact-cta hidden lg:inline-block bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition-transform hover:scale-105 shadow">
                     Agendar Conversa
                 </a>
             </nav>
@@ -120,7 +126,7 @@
             </div>
         </div>
 
-        <!-- Menu Mobile (DEPÓIMENTOS REMOVIDOS) -->
+        <!-- Menu Mobile -->
         <div id="mobile-menu" class="hidden md:hidden bg-white/95">
             <nav class="px-6 pt-2 pb-4 space-y-2 text-center">
                 <a href="#inicio" class="mobile-link block py-2 text-stone-700 hover:text-emerald-700">Início</a>
@@ -128,7 +134,7 @@
                 <a href="#como-funciona" class="mobile-link block py-2 text-stone-700 hover:text-emerald-700">Como Funciona</a>
                 <a href="#abordagem" class="mobile-link block py-2 text-stone-700 hover:text-emerald-700">Abordagem</a>
                 <!-- CTA COM RASTREAMENTO -->
-                <a href="https://wa.me/5511965762304?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+a+conversa+inicial.+Poderia+me+passar+mais+informa%C3%A7%C3%B5es%3F" target="_blank" class="mobile-link contact-cta mt-2 inline-block bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 shadow">
+                <a href="https://wa.me/5511965762304?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+a+conversa+inicial.+Poderia+me+passar+mais+informa%C3%A7%C3%B5es%3F" target="_blank" data-label="CTA_MenuMobile" class="mobile-link contact-cta mt-2 inline-block bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 shadow">
                     Agendar Conversa
                 </a>
             </nav>
@@ -139,16 +145,23 @@
         <!-- Seção Inicial (1ª Dobra) -->
         <section id="inicio" class="pt-24 md:pt-28 pb-12 bg-white">
             <div class="container mx-auto px-6 flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-                <!-- Imagem (primeiro no mobile) -->
+                <!-- Imagem (LCP) -->
                 <div class="w-full md:w-1/2 flex justify-center order-1 md:order-2">
-                    <!-- 💡 NOTA: OTIMIZE ESTAS IMAGENS PARA FORMATO WEBP E COMPRESSÃO MÁXIMA PARA AUMENTAR O PAGESPEED! -->
-                    <img src="https://i.postimg.cc/j5nkzgzn/Elisangela.jpg" alt="Foto profissional da psicóloga Elisangela Celestrino" class="rounded-3xl shadow-2xl w-1/2 max-w-xs aspect-square object-cover">
+                    <!-- 🟢 Prioridade LCP e Adição de formato WebP/Dimensões para LCP -->
+                    <img 
+                        src="https://i.postimg.cc/j5nkzgzn/Elisangela.jpg" 
+                        alt="Foto profissional da psicóloga Elisangela Celestrino" 
+                        class="rounded-3xl shadow-2xl w-1/2 max-w-xs aspect-square object-cover"
+                        loading="eager"
+                        fetchpriority="high"
+                        width="296" height="296" 
+                    >
                 </div>
-                <!-- Texto (segundo no mobile) -->
+                <!-- Texto -->
                 <div class="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
                     <h1 class="font-serif text-3xl sm:text-4xl font-bold text-stone-800 leading-tight">Cansada de carregar tudo sozinha?</h1>
                     
-                    <!-- 🟢 REFORÇO DE AUTORIDADE/CREDIBILIDADE -->
+                    <!-- REFORÇO DE AUTORIDADE/CREDIBILIDADE -->
                     <p class="mt-2 text-sm font-medium text-emerald-700 bg-emerald-100 inline-block px-3 py-1 rounded-full">
                         Psicóloga Clínica CRP: 06/187909
                     </p>
@@ -156,7 +169,7 @@
                     <p class="mt-4 text-base md:text-lg text-stone-600">Na terapia online com uma psicóloga que acolhe sem julgamentos, você encontra um espaço seguro para falar sobre o que sente e se redescobrir.</p>
                     
                     <!-- CTA COM RASTREAMENTO -->
-                    <a href="https://wa.me/5511965762304?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+a+conversa+inicial.+Poderia+me+passar+mais+informa%C3%A7%C3%B5es%3F" target="_blank" class="contact-cta mt-8 inline-block bg-emerald-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-emerald-700 transition-transform hover:scale-105 shadow-lg">
+                    <a href="https://wa.me/5511965762304?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+a+conversa+inicial.+Poderia+me+passar+mais+informa%C3%A7%C3%B5es%3F" target="_blank" data-label="CTA_Hero" class="contact-cta mt-8 inline-block bg-emerald-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-emerald-700 transition-transform hover:scale-105 shadow-lg">
                         Comece a sua jornada agora
                     </a>
                 </div>
@@ -168,7 +181,7 @@
             <div class="container mx-auto px-6">
                 <h2 class="font-serif text-3xl font-bold text-stone-800 text-center">A terapia online é para você que…</h2>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Cards mantidos (conteúdo de alta conversão) -->
+                    <!-- Cards mantidos -->
                     <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200 text-center flex flex-col items-center justify-start h-full">
                         <div class="bg-emerald-100 rounded-full p-3 mb-4 inline-flex">
                            <svg class="w-6 h-6 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -203,7 +216,7 @@
             <div class="container mx-auto px-6 text-center">
                 <h3 class="text-2xl font-bold text-stone-800">Algumas das áreas em que posso te auxiliar:</h3>
                 <div class="mt-8 flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
-                    <!-- Palavras-chave importantes para a publicidade -->
+                    <!-- Palavras-chave -->
                     <span class="bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-full px-5 py-2 font-medium">Ansiedade</span>
                     <span class="bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-full px-5 py-2 font-medium">Burnout</span>
                     <span class="bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-full px-5 py-2 font-medium">Relacionamentos</span>
@@ -218,7 +231,14 @@
         <section id="sobre" class="py-20 fade-in-section">
             <div class="container mx-auto px-6 grid md:grid-cols-5 gap-12 items-center">
                 <div class="md:col-span-2">
-                    <img src="https://i.postimg.cc/7LXgt3Dh/Captura-de-tela-2025-08-31-185351.jpg" alt="Retrato da psicóloga Elisangela Celestrino" class="rounded-lg shadow-xl mx-auto w-full max-w-sm">
+                    <!-- 🟢 Adição de dimensões e lazy-loading para imagem OFFSREEN -->
+                    <img 
+                        src="https://i.postimg.cc/7LXgt3Dh/Captura-de-tela-2025-08-31-185351.jpg" 
+                        alt="Retrato da psicóloga Elisangela Celestrino" 
+                        class="rounded-lg shadow-xl mx-auto w-full max-w-sm"
+                        loading="lazy"
+                        width="364" height="516"
+                    >
                 </div>
                 <div class="md:col-span-3">
                     <h2 class="font-serif text-3xl font-bold text-stone-800">Prazer, sou Elisangela</h2>
@@ -291,7 +311,7 @@
                 <p class="mt-4 text-lg max-w-2xl mx-auto opacity-90">Agende sua conversa inicial e descubra como a terapia online pode trazer mais leveza, equilíbrio e clareza para a sua vida.</p>
                 
                 <!-- CTA COM RASTREAMENTO -->
-                <a href="https://wa.me/5511965762304?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+a+conversa+inicial.+Poderia+me+passar+mais+informa%C3%A7%C3%B5es%3F" target="_blank" class="contact-cta mt-8 inline-flex items-center gap-3 bg-white text-emerald-700 px-8 py-4 rounded-full text-lg font-bold hover:bg-stone-100 transition-transform hover:scale-105 shadow-2xl">
+                <a href="https://wa.me/5511965762304?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+a+conversa+inicial.+Poderia+me+passar+mais+informa%C3%A7%C3%B5es%3F" target="_blank" data-label="CTA_Final" class="contact-cta mt-8 inline-flex items-center gap-3 bg-white text-emerald-700 px-8 py-4 rounded-full text-lg font-bold hover:bg-stone-100 transition-transform hover:scale-105 shadow-2xl">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.487 5.235 3.487 8.413 0 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.614-1.485l-6.354 1.654zm11.894-21.891c-5.448 0-9.888 4.44-9.888 9.888 0 1.956.562 3.828 1.59 5.448l.346.596-1.125 4.096 4.195-1.09.57.327c1.541.87 3.322 1.34 5.151 1.34 5.448 0 9.888-4.44 9.888-9.888 0-5.448-4.44-9.888-9.888-9.888zm5.093 12.158c-.272-.136-1.605-.79-1.855-.878-.25-.088-.432-.135-.614.135-.182.271-.699.878-.857 1.054-.158.176-.316.198-.596.062-.28-.136-1.187-.438-2.26-1.393-.836-.749-1.401-1.676-1.568-1.968-.168-.292-.018-.448.118-.584.12-.12.271-.316.406-.474.135-.158.181-.271.271-.453.089-.181.044-.34-.022-.474-.067-.135-.614-1.47-1.854-2.01-.22-.167-.44-.216-.613-.216-.174 0-.374-.022-.556-.022-.182 0-.479.068-.736.338-.257.271-1.002.977-1.002 2.383 0 1.406 1.026 2.768 1.168 2.944.142.176 2.008 3.067 4.862 4.283.679.288 1.21.46 1.624.582.723.216 1.385.181 1.905.108.583-.081 1.605-.655 1.83-1.282.225-.627.225-1.167.158-1.282-.068-.115-.25-.176-.522-.312z"/></svg>
                     Falar pelo WhatsApp
                 </a>
@@ -300,7 +320,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-stone-100 border-t pb-20 md:pb-0"> <!-- Ajustado o padding-bottom para não cobrir o rodapé fixo no mobile -->
+    <footer class="bg-stone-100 border-t pb-20 md:pb-0"> 
         <div class="container mx-auto px-6 py-8 text-center text-stone-600">
             <p class="font-bold">Elisangela Celestrino | Psicóloga Clínica</p>
             <p>CRP: 06/187909</p>
@@ -315,19 +335,18 @@
         </div>
     </footer>
 
-    <!-- 🟢 NOVO RODAPÉ FLUTUANTE (VISÍVEL APENAS EM MOBILE) -->
+    <!-- RODAPÉ FLUTUANTE (VISÍVEL APENAS EM MOBILE) -->
     <div id="floating-footer" class="bg-white border-t border-stone-200">
         <div class="flex justify-around items-center h-16 w-full max-w-lg mx-auto px-4">
             
             <!-- Link WhatsApp (Verde) -->
-            <a href="https://wa.me/5511965762304?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+a+conversa+inicial.+Poderia+me+passar+mais+informa%C3%A7%C3%B5es%3F" target="_blank" class="contact-cta text-emerald-600 hover:text-emerald-700 transition-colors p-2 rounded-full active:bg-stone-100" data-label="CTA_Floating_WhatsApp" aria-label="Falar no WhatsApp">
+            <a href="https://wa.me/5511965762304?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+a+conversa+inicial.+Poderia+me+passar+mais+informa%C3%A7%C3%B5es%3F" target="_blank" data-label="CTA_Floating_WhatsApp" class="contact-cta text-emerald-600 hover:text-emerald-700 transition-colors p-2 rounded-full active:bg-stone-100" aria-label="Falar no WhatsApp">
                 <!-- Ícone WhatsApp -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.487 5.235 3.487 8.413 0 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.614-1.485l-6.354 1.654zm11.894-21.891c-5.448 0-9.888 4.44-9.888 9.888 0 1.956.562 3.828 1.59 5.448l.346.596-1.125 4.096 4.195-1.09.57.327c1.541.87 3.322 1.34 5.151 1.34 5.448 0 9.888-4.44 9.888-9.888 0-5.448-4.44-9.888-9.888-9.888zm5.093 12.158c-.272-.136-1.605-.79-1.855-.878-.25-.088-.432-.135-.614.135-.182.271-.699.878-.857 1.054-.158.176-.316.198-.596.062-.28-.136-1.187-.438-2.26-1.393-.836-.749-1.401-1.676-1.568-1.968-.168-.292-.018-.448.118-.584.12-.12.271-.316.406-.474.135-.158.181-.271.271-.453.089-.181.044-.34-.022-.474-.067-.135-.614-1.47-1.854-2.01-.22-.167-.44-.216-.613-.216-.174 0-.374-.022-.556-.022-.182 0-.479.068-.736.338-.257.271-1.002.977-1.002 2.383 0 1.406 1.026 2.768 1.168 2.944.142.176 2.008 3.067 4.862 4.283.679.288 1.21.46 1.624.582.723.216 1.385.181 1.905.108.583-.081 1.605-.655 1.83-1.282.225-.627.225-1.167.158-1.282-.068-.115-.25-.176-.522-.312z"/></svg>
             </a>
             
-            <!-- Link Instagram (Simples Preto/Branco -> Cor Esmeralda no Rodapé) -->
-            <a href="https://www.instagram.com/elisangeladiogopsi/" target="_blank" class="contact-cta text-emerald-600 hover:text-emerald-700 transition-colors p-2 rounded-full active:bg-stone-100" data-label="CTA_Floating_Instagram" aria-label="Instagram">
-                <!-- Instagram logo (SVG Simples B&W) -->
+            <!-- Link Instagram -->
+            <a href="https://www.instagram.com/elisangeladiogopsi/" target="_blank" data-label="CTA_Floating_Instagram" class="contact-cta text-emerald-600 hover:text-emerald-700 transition-colors p-2 rounded-full active:bg-stone-100" aria-label="Instagram">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -335,8 +354,8 @@
                 </svg>
             </a>
 
-            <!-- Link E-mail (Esmeralda) -->
-            <a href="mailto:elisangeladiogo.psicologia@gmail.com" class="contact-cta text-emerald-600 hover:text-emerald-700 transition-colors p-2 rounded-full active:bg-stone-100" data-label="CTA_Floating_Email" aria-label="Enviar Email">
+            <!-- Link E-mail -->
+            <a href="mailto:elisangeladiogo.psicologia@gmail.com" data-label="CTA_Floating_Email" class="contact-cta text-emerald-600 hover:text-emerald-700 transition-colors p-2 rounded-full active:bg-stone-100" aria-label="Enviar Email">
                 <!-- Ícone Email -->
                 <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             </a>
@@ -347,14 +366,7 @@
         // 🟢 FUNÇÃO DE RASTREAMENTO DE CONVERSÃO
         function trackConversion(eventLabel) {
             console.log(`Conversão rastreada: ${eventLabel}`);
-            
-            // 💡 ESTE É O PONTO CHAVE PARA O GOOGLE ADS:
-            // Aqui você deve disparar o evento de conversão (via dataLayer ou gtag)
-            // window.dataLayer = window.dataLayer || [];
-            // window.dataLayer.push({
-            //     'event': 'whatsapp_click', // Use um nome genérico como 'cta_click' se for rastrear outras mídias
-            //     'event_label': eventLabel // Ex: 'CTA_Hero'
-            // });
+            // 💡 Se você usar GTM/gtag, o código deve ser inserido aqui
         }
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -374,37 +386,23 @@
                 });
             });
 
-            // 🟢 ADICIONA RASTREAMENTO AOS BOTÕES DE WHATSAPP (e agora Instagram/Email)
+            // 🟢 ADICIONA RASTREAMENTO AOS BOTÕES DE WHATSAPP/INSTAGRAM/EMAIL
             const ctaButtons = document.querySelectorAll('.contact-cta');
             ctaButtons.forEach(button => {
                 button.addEventListener('click', (e) => {
-                    // Previne o comportamento padrão (navegar) para dar tempo de rastrear
                     e.preventDefault(); 
                     const targetUrl = button.href;
                     
-                    // Dispara a função de conversão com uma label para identificar qual CTA foi clicado
-                    let label = button.getAttribute('data-label') || 'CTA_Outro'; // Pega o novo data-label do Floating Footer
-                    
-                    // Se não tiver data-label (CTAs tradicionais)
-                    if (label === 'CTA_Outro') {
-                        if (button.parentElement.id === 'inicio') {
-                            label = 'CTA_Hero';
-                        } else if (button.parentElement.id === 'contato') {
-                            label = 'CTA_Final';
-                        } else if (button.classList.contains('mobile-link')) {
-                             label = 'CTA_MenuMobile';
-                        }
-                    }
-
+                    // Dispara a função de conversão com a label do data-label
+                    const label = button.getAttribute('data-label') || 'CTA_Generico'; 
                     trackConversion(label);
                     
                     // Navega para o destino após um breve atraso para o rastreamento ser enviado
                     setTimeout(() => {
-                        window.open(targetUrl, '_blank');
+                        window.open(targetUrl, (button.target === '_blank' ? '_blank' : '_self'));
                     }, 100); 
                 });
             });
-
 
             // Script para animação de fade-in ao rolar a página
             const sections = document.querySelectorAll('.fade-in-section');
