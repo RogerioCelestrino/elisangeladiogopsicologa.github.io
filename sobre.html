@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim | Elisangela Diogo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">Elisangela Diogo | Psicóloga</a>
+            <nav class="desktop-nav">
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Quem Sou Eu</a>
+                <a href="politica-de-privacidade.html">Privacidade</a>
+                <a href="https://wa.me/5511965762304" target="_blank" class="contact-cta">Agendar Conversa</a>
+            </nav>
+            <button id="menu-btn" style="background:none; border:none; cursor:pointer; color: var(--stone-800);">
+                <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu">
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Quem Sou Eu</a>
+            <a href="politica-de-privacidade.html">Privacidade</a>
+            <a href="https://wa.me/5511965762304" target="_blank" class="contact-cta" style="margin-top:1rem">Agendar Conversa</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1 class="font-serif">Sobre Elisangela Diogo</h1>
+                <p style="color: var(--stone-500); margin-top: 1rem;">Conheça um pouco mais sobre minha trajetória e abordagem.</p>
+            </div>
+        </div>
+        
+        <div class="page-content">
+            <div class="container">
+                <div class="content-box">
+                    <p style="margin-bottom: 1.5rem;">Sou Elisangela Diogo, Psicóloga Clínica, inscrita no Conselho Regional de Psicologia da 6ª Região (<strong>CRP 06/187909 – SP</strong>).</p>
+                    <p style="margin-bottom: 1.5rem;">Sou graduada em Psicologia e possuo pós-graduação em Psicopedagogia e Neurociências. Atuo na abordagem Centrada na Pessoa (ACP), oferecendo atendimento psicológico online para mulheres adultas.</p>
+                    <p style="margin-bottom: 1.5rem;">Minha experiência inclui mais de 10 anos na área de Recursos Humanos, contribuindo para minha atuação em temas como ansiedade, burnout e relacionamentos.</p>
+                    <p style="margin-bottom: 1.5rem;">Realizo atendimento exclusivamente online, por videochamada, seguindo o Código de Ética do Psicólogo e garantindo sigilo profissional.</p>
+                    <p style="margin-bottom: 2rem;">Este site apresenta exclusivamente meus serviços profissionais e não representa outras marcas ou instituições.</p>
+                    
+                    <div style="background: var(--stone-50); padding: 1.5rem; border-left: 4px solid var(--emerald-600); border-radius: 0 0.5rem 0.5rem 0;">
+                        <strong>Atendimento online para todo o Brasil.</strong><br>
+                        São Paulo – SP<br>
+                        E-mail: elisangeladiogo.psicologia@gmail.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="font-weight: 700; font-size: 1.2rem; color: var(--stone-800); margin-bottom: 0.5rem;">Elisangela Diogo | Psicóloga Clínica</p>
+            <div class="footer-nav">
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre Mim</a>
+                <a href="politica-de-privacidade.html">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+    </script>
+</body>
+</html>
