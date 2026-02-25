@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade | Elisangela Diogo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">Elisangela Diogo | Psicóloga</a>
+            <nav class="desktop-nav">
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Quem Sou Eu</a>
+                <a href="politica-de-privacidade.html" style="color: var(--emerald-700);">Privacidade</a>
+                <a href="https://wa.me/5511965762304" target="_blank" class="contact-cta">Agendar Conversa</a>
+            </nav>
+            <button id="menu-btn" style="background:none; border:none; cursor:pointer; color: var(--stone-800);">
+                <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu">
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Quem Sou Eu</a>
+            <a href="politica-de-privacidade.html">Privacidade</a>
+            <a href="https://wa.me/5511965762304" target="_blank" class="contact-cta" style="margin-top:1rem">Agendar Conversa</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1 class="font-serif">Política de Privacidade</h1>
+                <p style="color: var(--stone-500); margin-top: 1rem;">Última atualização: fevereiro de 2026</p>
+            </div>
+        </div>
+        
+        <div class="page-content">
+            <div class="container">
+                <div class="content-box">
+                    <p style="margin-bottom: 1.2rem;">O site <strong>elisangeladiogopsicologa.com.br</strong> é de responsabilidade de Elisangela Diogo – Psicóloga Clínica (CRP 06/187909).</p>
+                    <p style="margin-bottom: 1.2rem;">Este site não solicita dados sensíveis como senhas, números de cartão de crédito ou informações bancárias.</p>
+                    <p style="margin-bottom: 1.2rem;">Caso o visitante forneça nome, e-mail ou telefone para contato, essas informações são utilizadas exclusivamente para comunicação profissional e agendamento de consultas, não sendo compartilhadas com terceiros.</p>
+                    <p style="margin-bottom: 1.2rem;">O site pode utilizar cookies e ferramentas como Google Analytics ou Google Tag Manager para fins estatísticos e melhoria da navegação.</p>
+                    <p style="margin-bottom: 2rem;">O tratamento de dados observa a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+                    
+                    <h3 style="margin-bottom: 1rem; color: var(--stone-800);">Dúvidas?</h3>
+                    <p>Podem ser encaminhadas para:<br>
+                    <strong>elisangeladiogo.psicologia@gmail.com</strong><br>
+                    São Paulo – SP</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="font-weight: 700; font-size: 1.2rem; color: var(--stone-800); margin-bottom: 0.5rem;">Elisangela Diogo | Psicóloga Clínica</p>
+            <div class="footer-nav">
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre Mim</a>
+                <a href="politica-de-privacidade.html">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+    </script>
+</body>
+</html>
