@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidade | Elisangela Diogo</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" href="img/Elisangela.jpg" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -29,28 +33,23 @@
         </div>
     </header>
 
-    <main>
-        <div class="page-header">
-            <div class="container">
-                <h1 class="font-serif">Política de Privacidade</h1>
-                <p style="color: var(--stone-500); margin-top: 1rem;">Última atualização: fevereiro de 2026</p>
-            </div>
-        </div>
-        
-        <div class="page-content">
-            <div class="container">
-                <div class="content-box">
-                    <p style="margin-bottom: 1.2rem;">O site <strong>elisangeladiogopsicologa.com.br</strong> é de responsabilidade de Elisangela Diogo – Psicóloga Clínica (CRP 06/187909).</p>
-                    <p style="margin-bottom: 1.2rem;">Este site não solicita dados sensíveis como senhas, números de cartão de crédito ou informações bancárias.</p>
-                    <p style="margin-bottom: 1.2rem;">Caso o visitante forneça nome, e-mail ou telefone para contato, essas informações são utilizadas exclusivamente para comunicação profissional e agendamento de consultas, não sendo compartilhadas com terceiros.</p>
-                    <p style="margin-bottom: 1.2rem;">O site pode utilizar cookies e ferramentas como Google Analytics ou Google Tag Manager para fins estatísticos e melhoria da navegação.</p>
-                    <p style="margin-bottom: 2rem;">O tratamento de dados observa a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
-                    
-                    <h3 style="margin-bottom: 1rem; color: var(--stone-800);">Dúvidas?</h3>
-                    <p>Podem ser encaminhadas para:<br>
-                    <strong>elisangeladiogo.psicologia@gmail.com</strong><br>
-                    São Paulo – SP</p>
-                </div>
+    <main class="page-interna fade-in-section">
+        <div class="container content-box">
+            <h1 class="font-serif" style="font-size: 2.2rem; margin-bottom: 1rem; text-align: center;">Política de Privacidade</h1>
+            <p style="margin-bottom: 3rem; text-align: center; color: var(--stone-500); font-size: 0.9rem;">Última atualização: fevereiro de 2026</p>
+            
+            <div style="color: var(--stone-700); line-height: 1.8;">
+                <p style="margin-bottom: 1rem;">O site <strong>elisangeladiogopsicologa.com.br</strong> é de responsabilidade de Elisangela Diogo – Psicóloga Clínica (CRP 06/187909).</p>
+                <p style="margin-bottom: 1rem;">Este site não solicita dados sensíveis como senhas, números de cartão de crédito ou informações bancárias.</p>
+                <p style="margin-bottom: 1rem;">Caso o visitante forneça nome, e-mail ou telefone para contato, essas informações são utilizadas exclusivamente para comunicação profissional e agendamento de consultas, não sendo compartilhadas com terceiros.</p>
+                <p style="margin-bottom: 1rem;">O site pode utilizar cookies e ferramentas como Google Analytics ou Google Tag Manager para fins estatísticos e melhoria da navegação.</p>
+                <p style="margin-bottom: 1rem;">O tratamento de dados observa a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+                
+                <p style="margin-top: 3rem; background: var(--stone-50); padding: 1.5rem; border-radius: 0.5rem; text-align: center; border: 1px solid var(--stone-200);">
+                    <strong>Dúvidas podem ser encaminhadas para:</strong><br>
+                    elisangeladiogo.psicologia@gmail.com<br>
+                    São Paulo – SP
+                </p>
             </div>
         </div>
     </main>
@@ -58,18 +57,23 @@
     <footer>
         <div class="container">
             <p style="font-weight: 700; font-size: 1.2rem; color: var(--stone-800); margin-bottom: 0.5rem;">Elisangela Diogo | Psicóloga Clínica</p>
+            <p>CRP: 06/187909</p>
             <div class="footer-nav">
                 <a href="index.html">Início</a>
                 <a href="sobre.html">Sobre Mim</a>
                 <a href="politica-de-privacidade.html">Política de Privacidade</a>
+                <a href="mailto:elisangeladiogo.psicologia@gmail.com">E-mail</a>
             </div>
         </div>
     </footer>
 
     <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+            setTimeout(() => document.querySelector('.fade-in-section').classList.add('is-visible'), 100);
+        });
     </script>
 </body>
 </html>
