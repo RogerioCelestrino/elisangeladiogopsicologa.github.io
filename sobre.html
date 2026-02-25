@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Mim | Elisangela Diogo</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" href="img/Elisangela.jpg" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -13,7 +17,7 @@
             <a href="index.html" class="logo">Elisangela Diogo | Psicóloga</a>
             <nav class="desktop-nav">
                 <a href="index.html">Início</a>
-                <a href="sobre.html">Quem Sou Eu</a>
+                <a href="sobre.html" style="color: var(--emerald-700);">Quem Sou Eu</a>
                 <a href="politica-de-privacidade.html">Privacidade</a>
                 <a href="https://wa.me/5511965762304" target="_blank" class="contact-cta">Agendar Conversa</a>
             </nav>
@@ -29,29 +33,28 @@
         </div>
     </header>
 
-    <main>
-        <div class="page-header">
-            <div class="container">
-                <h1 class="font-serif">Sobre Elisangela Diogo</h1>
-                <p style="color: var(--stone-500); margin-top: 1rem;">Conheça um pouco mais sobre minha trajetória e abordagem.</p>
-            </div>
-        </div>
-        
-        <div class="page-content">
-            <div class="container">
-                <div class="content-box">
-                    <p style="margin-bottom: 1.5rem;">Sou Elisangela Diogo, Psicóloga Clínica, inscrita no Conselho Regional de Psicologia da 6ª Região (<strong>CRP 06/187909 – SP</strong>).</p>
-                    <p style="margin-bottom: 1.5rem;">Sou graduada em Psicologia e possuo pós-graduação em Psicopedagogia e Neurociências. Atuo na abordagem Centrada na Pessoa (ACP), oferecendo atendimento psicológico online para mulheres adultas.</p>
-                    <p style="margin-bottom: 1.5rem;">Minha experiência inclui mais de 10 anos na área de Recursos Humanos, contribuindo para minha atuação em temas como ansiedade, burnout e relacionamentos.</p>
-                    <p style="margin-bottom: 1.5rem;">Realizo atendimento exclusivamente online, por videochamada, seguindo o Código de Ética do Psicólogo e garantindo sigilo profissional.</p>
-                    <p style="margin-bottom: 2rem;">Este site apresenta exclusivamente meus serviços profissionais e não representa outras marcas ou instituições.</p>
+    <main class="page-interna fade-in-section">
+        <div class="container">
+            <div class="about-grid">
+                <div style="text-align: center;"><img src="img/perfil.jpg" alt="Elisangela Diogo" class="about-img"></div>
+                <div>
+                    <h1 class="font-serif" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Sobre Elisangela Diogo</h1>
+                    <p style="margin-bottom: 1.2rem;">Sou Elisangela Diogo, Psicóloga Clínica, inscrita no Conselho Regional de Psicologia da 6ª Região (CRP 06/187909 – SP).</p>
+                    <p style="margin-bottom: 1.2rem;">Sou graduada em Psicologia e possuo pós-graduação em Psicopedagogia e Neurociências. Atuo na abordagem Centrada na Pessoa (ACP), oferecendo atendimento psicológico online para mulheres adultas.</p>
+                    <p style="margin-bottom: 1.2rem;">Minha experiência inclui mais de 10 anos na área de Recursos Humanos, contribuindo para minha atuação em temas como ansiedade, burnout e relacionamentos.</p>
+                    <p style="margin-bottom: 1.2rem;">Realizo atendimento exclusivamente online, por videochamada, seguindo o Código de Ética do Psicólogo e garantindo sigilo profissional.</p>
+                    <p style="margin-bottom: 1.5rem;">Este site apresenta exclusivamente meus serviços profissionais e não representa outras marcas ou instituições.</p>
                     
-                    <div style="background: var(--stone-50); padding: 1.5rem; border-left: 4px solid var(--emerald-600); border-radius: 0 0.5rem 0.5rem 0;">
+                    <p style="font-size: 0.95rem; background: var(--stone-100); padding: 1rem; border-radius: 0.5rem; display: inline-block;">
                         <strong>Atendimento online para todo o Brasil.</strong><br>
                         São Paulo – SP<br>
                         E-mail: elisangeladiogo.psicologia@gmail.com
-                    </div>
+                    </p>
                 </div>
+            </div>
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="https://wa.me/5511965762304" target="_blank" class="contact-cta" style="padding: 1rem 2rem;">Falar com Elisangela</a>
+                <p style="font-size: 0.75rem; color: var(--stone-500); margin-top: 10px;">Ao clicar, você será redirecionado para o WhatsApp. Tratamos seus dados conforme a nossa <a href="politica-de-privacidade.html" style="color: var(--stone-600);">Política de Privacidade</a>.</p>
             </div>
         </div>
     </main>
@@ -59,18 +62,26 @@
     <footer>
         <div class="container">
             <p style="font-weight: 700; font-size: 1.2rem; color: var(--stone-800); margin-bottom: 0.5rem;">Elisangela Diogo | Psicóloga Clínica</p>
+            <p>CRP: 06/187909</p>
             <div class="footer-nav">
                 <a href="index.html">Início</a>
                 <a href="sobre.html">Sobre Mim</a>
                 <a href="politica-de-privacidade.html">Política de Privacidade</a>
+                <a href="mailto:elisangeladiogo.psicologia@gmail.com">E-mail</a>
+            </div>
+            <div style="border-top: 1px solid var(--stone-200); padding-top: 3rem; margin-top: 2rem;">
+                <p style="font-size: 0.8rem; color: var(--stone-600); max-width: 650px; margin: 0 auto 2.5rem; line-height: 1.6;">A psicoterapia é um processo de cuidado e não se destina a emergências. Em caso de crise, ligue para o <strong>CVV no número 188</strong>.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+            setTimeout(() => document.querySelector('.fade-in-section').classList.add('is-visible'), 100);
+        });
     </script>
 </body>
 </html>
