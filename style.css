@@ -1,80 +1,339 @@
-:root { 
-    --emerald-50: #ecfdf5; --emerald-100: #d1fae5; --emerald-200: #a7f3d0; 
-    --emerald-600: #059669; --emerald-700: #047857; --emerald-800: #065f46;
-    --stone-50: #fafaf9; --stone-100: #f5f5f4; --stone-200: #e7e5e4; 
-    --stone-600: #57534e; --stone-700: #44403c; --stone-800: #292524;
-    --white: #ffffff;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; background-color: var(--stone-50); color: var(--stone-700); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-.font-serif { font-family: 'Playfair Display', serif; }
-.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; position: relative; }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Psicóloga Online | Elisangela Diogo - Terapia Humanista (ACP)</title>
+    <meta name="description" content="Terapia online para mulheres que carregam o peso do dia a dia. Encontre alívio da ansiedade, insegurança e burnout. Agende sua conversa inicial agora. CRP 06/187909.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Elisangela Diogo - Psicologia Clínica",
+      "image": "https://elisangeladiogopsicologa.com.br/img/Elisangela.jpg",
+      "@id": "https://elisangeladiogopsicologa.com.br",
+      "url": "https://elisangeladiogopsicologa.com.br",
+      "telephone": "+5511965762304",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "medicalSpecialty": "Psychotherapy",
+      "proprietor": {
+        "@type": "Person",
+        "name": "Elisangela Diogo",
+        "jobTitle": "Psicóloga Clínica",
+        "identifier": "CRP 06/187909"
+      }
+    }
+    </script>
 
-header { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); position: fixed; top: 0; left: 0; right: 0; z-index: 50; border-bottom: 1px solid var(--stone-200); }
-.header-content { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
-.logo { font-weight: 700; font-size: 1rem; color: var(--stone-800); text-decoration: none; }
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NPBCTMJB');</script>
+    
+    <link rel="icon" href="img/Elisangela.jpg" type="image/png">
 
-nav.desktop-nav { display: none; gap: 1.5rem; align-items: center; }
-nav.desktop-nav a { color: var(--stone-700); text-decoration: none; transition: 0.2s; font-size: 0.9rem; font-weight: 500; }
-nav.desktop-nav a:hover { color: var(--emerald-700); }
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Psicóloga Online | Elisangela Diogo - Terapia Humanista (ACP)">
+    <meta property="og:description" content="Cansada de carregar tudo sozinha? Encontre um espaço seguro na terapia online para ser ouvida sem julgamentos.">
+    <meta property="og:image" content="img/Elisangela.jpg"> 
+    <meta property="og:url" content="https://elisangeladiogopsicologa.com.br">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
 
-.instagram-icon { color: var(--stone-500); transition: 0.2s; display: flex; align-items: center; }
-.instagram-icon:hover { color: var(--emerald-700); transform: scale(1.1); }
+    <style>
+        :root { 
+            --emerald-50: #ecfdf5; --emerald-100: #d1fae5; --emerald-200: #a7f3d0; 
+            --emerald-600: #059669; --emerald-700: #047857; --emerald-800: #065f46;
+            --stone-50: #fafaf9; --stone-100: #f5f5f4; --stone-200: #e7e5e4; 
+            --stone-600: #57534e; --stone-700: #44403c; --stone-800: #292524;
+            --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--stone-50); color: var(--stone-700); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; position: relative; }
+        
+        header { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); position: fixed; top: 0; left: 0; right: 0; z-index: 50; border-bottom: 1px solid var(--stone-200); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+        .logo { font-weight: 700; font-size: 1rem; color: var(--stone-800); text-decoration: none; }
+        
+        nav.desktop-nav { display: none; gap: 1.5rem; align-items: center; }
+        nav.desktop-nav a { color: var(--stone-700); text-decoration: none; transition: 0.2s; font-size: 0.9rem; font-weight: 500; }
+        nav.desktop-nav a:hover { color: var(--emerald-700); }
+        
+        .instagram-icon { color: var(--stone-500); transition: 0.2s; display: flex; align-items: center; }
+        .instagram-icon:hover { color: var(--emerald-700); transform: scale(1.1); }
 
-.contact-cta { background: var(--emerald-600); color: var(--white); padding: 0.6rem 1.4rem; border-radius: 9999px; font-weight: 600; text-decoration: none; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: inline-block; font-size: 0.9rem; }
-.contact-cta:hover { transform: translateY(-2px); background: var(--emerald-700); }
+        .contact-cta { background: var(--emerald-600); color: var(--white); padding: 0.6rem 1.4rem; border-radius: 9999px; font-weight: 600; text-decoration: none; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: inline-block; font-size: 0.9rem; }
+        .contact-cta:hover { transform: translateY(-2px); background: var(--emerald-700); }
 
-#mobile-menu { display: none; background: var(--white); padding: 1rem; text-align: center; border-top: 1px solid var(--stone-200); position: absolute; width: 100%; left: 0; }
-#mobile-menu.active { display: block; }
-#mobile-menu a { display: block; padding: 0.75rem; color: var(--stone-700); text-decoration: none; font-weight: 500; }
+        #mobile-menu { display: none; background: var(--white); padding: 1rem; text-align: center; border-top: 1px solid var(--stone-200); position: absolute; width: 100%; left: 0; }
+        #mobile-menu.active { display: block; }
+        #mobile-menu a { display: block; padding: 0.75rem; color: var(--stone-700); text-decoration: none; font-weight: 500; }
 
-section { padding: 5rem 0; }
-#inicio { padding-top: 9rem; background: var(--white); }
+        section { padding: 5rem 0; }
+        #inicio { padding-top: 9rem; background: var(--white); }
+        
+        .hero-flex { display: flex; flex-direction: column; gap: 3rem; align-items: center; justify-content: center; }
+        .hero-text { text-align: center; order: 2; width: 100%; }
+        .hero-img-cont { order: 1; text-align: center; width: 100%; display: flex; justify-content: center; }
+        .hero-img { width: 100%; max-width: 296px; border-radius: 2rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.2); aspect-ratio: 1/1; object-fit: cover; }
+        
+        .badge { background: var(--emerald-100); color: var(--emerald-700); padding: 0.3rem 0.8rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin: 1rem 0; }
+        h1 { font-size: 2.2rem; line-height: 1.2; color: var(--stone-800); font-weight: 700; }
 
-.hero-flex { display: flex; flex-direction: column; gap: 3rem; align-items: center; justify-content: center; }
-.hero-text { text-align: center; order: 2; width: 100%; }
-.hero-img-cont { order: 1; text-align: center; width: 100%; display: flex; justify-content: center; }
-.hero-img { width: 100%; max-width: 296px; border-radius: 2rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.2); aspect-ratio: 1/1; object-fit: cover; }
+        .grid-cards { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 3rem; }
+        .card { background: var(--white); padding: 2rem; border-radius: 1rem; border: 1px solid var(--stone-200); text-align: center; display: flex; flex-direction: column; align-items: center; }
+        .icon-circle { background: var(--emerald-100); width: 3.5rem; height: 3.5rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
+        .icon-circle svg { width: 1.8rem; height: 1.8rem; color: var(--emerald-700); }
 
-.badge { background: var(--emerald-100); color: var(--emerald-700); padding: 0.3rem 0.8rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin: 1rem 0; }
-h1 { font-size: 2.2rem; line-height: 1.2; color: var(--stone-800); font-weight: 700; }
+        .tag-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin-top: 2rem; }
+        .tag { background: var(--emerald-50); color: var(--emerald-800); border: 1px solid var(--emerald-200); padding: 0.5rem 1.2rem; border-radius: 9999px; font-weight: 600; font-size: 0.9rem; }
 
-.grid-cards { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 3rem; }
-.card { background: var(--white); padding: 2rem; border-radius: 1rem; border: 1px solid var(--stone-200); text-align: center; display: flex; flex-direction: column; align-items: center; }
-.icon-circle { background: var(--emerald-100); width: 3.5rem; height: 3.5rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
-.icon-circle svg { width: 1.8rem; height: 1.8rem; color: var(--emerald-700); }
+        .about-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
+        .about-img { width: 100%; max-width: 364px; border-radius: 0.8rem; box-shadow: 0 20px 25px rgba(0,0,0,0.1); margin: 0 auto; }
 
-.tag-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin-top: 2rem; }
-.tag { background: var(--emerald-50); color: var(--emerald-800); border: 1px solid var(--emerald-200); padding: 0.5rem 1.2rem; border-radius: 9999px; font-weight: 600; font-size: 0.9rem; }
+        footer { background: var(--stone-100); border-top: 1px solid var(--stone-200); padding: 4rem 0 7rem; text-align: center; }
+        .footer-nav { display: flex; justify-content: center; gap: 1.5rem; margin: 2rem 0; font-size: 0.85rem; font-weight: 600; flex-wrap: wrap; }
+        .footer-nav a { color: var(--emerald-700); text-decoration: none; }
+        
+        #floating-footer { position: fixed; bottom: 0; left: 0; right: 0; background: var(--white); border-top: 1px solid var(--stone-200); height: 4.5rem; display: flex; justify-content: space-around; align-items: center; z-index: 100; box-shadow: 0 -4px 10px rgba(0,0,0,0.05); }
 
-.about-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
-.about-img { width: 100%; max-width: 364px; border-radius: 0.8rem; box-shadow: 0 20px 25px rgba(0,0,0,0.1); margin: 0 auto; }
+        .fade-in-section { opacity: 0; transform: translateY(20px); transition: 0.8s ease-out; }
+        .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
 
-footer { background: var(--stone-100); border-top: 1px solid var(--stone-200); padding: 4rem 0 7rem; text-align: center; }
-.footer-nav { display: flex; justify-content: center; gap: 1.5rem; margin: 2rem 0; font-size: 0.85rem; font-weight: 600; flex-wrap: wrap; }
-.footer-nav a { color: var(--emerald-700); text-decoration: none; }
+        @media (min-width: 768px) {
+            nav.desktop-nav { display: flex; }
+            #menu-btn { display: none; }
+            .hero-flex { flex-direction: row; text-align: left; }
+            .hero-text { text-align: left; order: 1; flex: 1.2; }
+            .hero-img-cont { order: 2; flex: 0.8; justify-content: flex-end; }
+            h1 { font-size: 3rem; }
+            .grid-cards { grid-template-columns: repeat(4, 1fr); }
+            .about-grid { grid-template-columns: 1.5fr 2fr; }
+            .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+            footer { padding-bottom: 3rem; }
+            #floating-footer { display: none; }
+        }
+    </style>
+</head>
+<body>
 
-#floating-footer { position: fixed; bottom: 0; left: 0; right: 0; background: var(--white); border-top: 1px solid var(--stone-200); height: 4.5rem; display: flex; justify-content: space-around; align-items: center; z-index: 100; box-shadow: 0 -4px 10px rgba(0,0,0,0.05); }
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPBCTMJB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <header>
+        <div class="container header-content">
+            <a href="#inicio" class="logo">Elisangela Diogo | Psicóloga</a>
+            <nav class="desktop-nav">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Quem Sou Eu</a>
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#politica-de-privacidade">Privacidade</a>
+                <a href="https://www.instagram.com/elisangeladiogopsi/" target="_blank" class="instagram-icon" aria-label="Instagram">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://wa.me/5511965762304" target="_blank" class="contact-cta">Agendar Conversa</a>
+            </nav>
+            <button id="menu-btn" style="background:none; border:none; cursor:pointer; color: var(--stone-800);">
+                <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Quem Sou Eu</a>
+            <a href="#politica-de-privacidade">Privacidade</a>
+            <a href="https://wa.me/5511965762304" target="_blank" class="contact-cta" style="margin-top:1rem">Agendar Conversa</a>
+        </div>
+    </header>
 
-.fade-in-section { opacity: 0; transform: translateY(20px); transition: 0.8s ease-out; }
-.fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
+    <main>
+        <section id="inicio">
+            <div class="container">
+                <div class="hero-flex">
+                    <div class="hero-text">
+                        <h1 class="font-serif">Cansada de carregar tudo sozinha?</h1>
+                        <span class="badge">Psicóloga Clínica CRP: 06/187909</span>
+                        <p style="font-size: 1.15rem; color: var(--stone-600); max-width: 580px; margin: 0 auto 0 0;">Na terapia online com uma psicóloga que acolhe sem julgamentos, você encontra um espaço seguro para falar sobre o que sente e se redescobrir.</p>
+                        
+                        <div style="margin-top: 2.5rem;">
+                            <a href="https://wa.me/5511965762304" target="_blank" class="contact-cta" style="padding: 1.1rem 2.8rem; font-size: 1.1rem; display: inline-block;">Comece a sua jornada agora</a>
+                            <p style="font-size: 0.75rem; color: var(--stone-500); margin-top: 0.8rem; max-width: 400px;">Ao clicar, você será redirecionado para o WhatsApp. Suas informações são tratadas conforme nossa Política de Privacidade e o sigilo profissional do CRP.</p>
+                        </div>
+                    </div>
+                    <div class="hero-img-cont">
+                        <img src="img/Elisangela.jpg" alt="Foto profissional da psicóloga Elisangela Diogo" class="hero-img">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-/* Conteúdo de Páginas Internas */
-.page-header { padding-top: 10rem; padding-bottom: 3rem; text-align: center; background: var(--white); border-bottom: 1px solid var(--stone-200); }
-.page-content { padding: 4rem 0; background: var(--stone-50); }
-.content-box { max-width: 800px; margin: 0 auto; background: var(--white); padding: 3rem; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); }
+        <section class="fade-in-section">
+            <div class="container">
+                <h2 class="font-serif" style="text-align: center; font-size: 2.2rem;">A terapia online é para você que…</h2>
+                <div class="grid-cards">
+                    <div class="card"><div class="icon-circle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><p>...carrega o mundo nas costas, mas não encontra tempo para si.</p></div>
+                    <div class="card"><div class="icon-circle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><p>...vive no piloto automático e sente que está se perdendo de si mesma.</p></div>
+                    <div class="card"><div class="icon-circle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><p>...se cobra demais, tem dificuldade em dizer “não” e só queria paz.</p></div>
+                    <div class="card"><div class="icon-circle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><p>...deseja suporte online, com acolhimento e praticidade.</p></div>
+                </div>
+                <p style="text-align: center; margin-top: 3.5rem; font-weight: 700; font-size: 1.25rem;">Aqui você encontra um espaço seguro para parar, respirar e se escutar.</p>
+            </div>
+        </section>
 
-@media (min-width: 768px) {
-    nav.desktop-nav { display: flex; }
-    #menu-btn { display: none; }
-    .hero-flex { flex-direction: row; text-align: left; }
-    .hero-text { text-align: left; order: 1; flex: 1.2; }
-    .hero-img-cont { order: 2; flex: 0.8; justify-content: flex-end; }
-    h1 { font-size: 3rem; }
-    .grid-cards { grid-template-columns: repeat(4, 1fr); }
-    .about-grid { grid-template-columns: 1.5fr 2fr; }
-    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-    footer { padding-bottom: 3rem; }
-    #floating-footer { display: none; }
-}
+        <section style="background: var(--white);" class="fade-in-section">
+            <div class="container text-center">
+                <h3 style="font-size: 1.6rem; color: var(--stone-800);">Áreas em que posso te auxiliar:</h3>
+                <div class="tag-list">
+                    <span class="tag">Ansiedade</span><span class="tag">Burnout</span><span class="tag">Relacionamentos</span>
+                    <span class="tag">Insegurança</span><span class="tag">Depressão</span><span class="tag">Estilo de vida</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="fade-in-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div style="text-align: center;"><img src="img/perfil.jpg" alt="Elisangela Diogo" class="about-img"></div>
+                    <div>
+                        <h2 class="font-serif" style="font-size: 2.2rem; margin-bottom: 1.5rem;">Sobre Elisangela Diogo</h2>
+                        <p style="margin-bottom: 1.2rem;">Sou Elisangela Diogo, Psicóloga Clínica, inscrita no Conselho Regional de Psicologia da 6ª Região (CRP 06/187909 – SP).</p>
+                        <p style="margin-bottom: 1.2rem;">Sou graduada em Psicologia e possuo pós-graduação em Psicopedagogia e Neurociências. Atuo na abordagem Centrada na Pessoa (ACP), oferecendo atendimento psicológico online para mulheres adultas.</p>
+                        <p style="margin-bottom: 1.2rem;">Minha experiência inclui mais de 10 anos na área de Recursos Humanos, contribuindo para minha atuação em temas como ansiedade, burnout e relacionamentos.</p>
+                        <p style="margin-bottom: 1.2rem;">Realizo atendimento exclusivamente online, por videochamada, seguindo o Código de Ética do Psicólogo e garantindo sigilo profissional.</p>
+                        <p style="margin-bottom: 1.5rem;">Este site apresenta exclusivamente meus serviços profissionais e não representa outras marcas ou instituições.</p>
+                        
+                        <p style="font-size: 0.95rem; background: var(--stone-100); padding: 1rem; border-radius: 0.5rem;">
+                            <strong>Atendimento online para todo o Brasil.</strong><br>
+                            São Paulo – SP<br>
+                            E-mail: elisangeladiogo.psicologia@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="como-funciona" style="background: var(--white);" class="fade-in-section">
+            <div class="container text-center">
+                <h2 class="font-serif" style="font-size: 2.2rem; margin-bottom: 1rem;">Como Funciona a Terapia Online</h2>
+                <p style="color: var(--stone-600); margin-bottom: 4rem;">Um processo simples, prático e totalmente seguro:</p>
+                <div class="steps-grid">
+                    <div class="card"><div class="icon-circle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg></div><h4>1. Agendamento</h4><p>Entre em contato pelo WhatsApp para agendarmos a avaliação inicial.</p></div>
+                    <div class="card"><div class="icon-circle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg></div><h4>2. Sessão</h4><p>Realizadas por videochamada em plataforma segura e sigilosa.</p></div>
+                    <div class="card"><div class="icon-circle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><h4>3. Acolhimento</h4><p>Um espaço só seu para refletir e encontrar novas formas de agir.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="abordagem" class="fade-in-section">
+            <div class="container text-center">
+                <h2 class="font-serif" style="font-size: 2.2rem; margin-bottom: 4rem;">Minha Abordagem: ACP</h2>
+                <div class="steps-grid" style="text-align: left;">
+                    <div class="card" style="align-items: flex-start; text-align: left;"><h3 style="color: var(--emerald-800); margin-bottom: 1rem;">Empatia Profunda</h3><p>Compreendo seu mundo interno sem julgamentos, a partir da sua visão única.</p></div>
+                    <div class="card" style="align-items: flex-start; text-align: left;"><h3 style="color: var(--emerald-800); margin-bottom: 1rem;">Aceitação Incondicional</h3><p>Ambiente de respeito pleno para que você se sinta segura para ser quem é.</p></div>
+                    <div class="card" style="align-items: flex-start; text-align: left;"><h3 style="color: var(--emerald-800); margin-bottom: 1rem;">Autenticidade</h3><p>Presença genuína e transparente na nossa parceria terapêutica.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="politica-de-privacidade" style="background: var(--white); border-top: 1px solid var(--stone-200);" class="fade-in-section">
+            <div class="container" style="max-width: 800px;">
+                <h2 class="font-serif" style="font-size: 2.2rem; margin-bottom: 1rem; text-align: center;">Política de Privacidade</h2>
+                <p style="margin-bottom: 2rem; text-align: center; color: var(--stone-500); font-size: 0.9rem;">Última atualização: fevereiro de 2026</p>
+                
+                <div style="color: var(--stone-700); line-height: 1.8;">
+                    <p style="margin-bottom: 1rem;">O site <strong>elisangeladiogopsicologa.com.br</strong> é de responsabilidade de Elisangela Diogo – Psicóloga Clínica (CRP 06/187909).</p>
+                    <p style="margin-bottom: 1rem;">Este site não solicita dados sensíveis como senhas, números de cartão de crédito ou informações bancárias.</p>
+                    <p style="margin-bottom: 1rem;">Caso o visitante forneça nome, e-mail ou telefone para contato, essas informações são utilizadas exclusivamente para comunicação profissional e agendamento de consultas, não sendo compartilhadas com terceiros.</p>
+                    <p style="margin-bottom: 1rem;">O site pode utilizar cookies e ferramentas como Google Analytics ou Google Tag Manager para fins estatísticos e melhoria da navegação.</p>
+                    <p style="margin-bottom: 1rem;">O tratamento de dados observa a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+                    
+                    <p style="margin-top: 2rem; background: var(--stone-50); padding: 1.5rem; border-radius: 0.5rem; text-align: center;">
+                        <strong>Dúvidas podem ser encaminhadas para:</strong><br>
+                        elisangeladiogo.psicologia@gmail.com<br>
+                        São Paulo – SP
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" style="background: var(--emerald-700); color: var(--white); text-align: center; padding: 6rem 0;">
+            <div class="container">
+                <h2 class="font-serif" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Sua jornada pode começar hoje</h2>
+                <a href="https://wa.me/5511965762304" target="_blank" class="contact-cta" style="background: var(--white); color: var(--emerald-700); font-weight: 800; padding: 1.3rem 3rem; font-size: 1.2rem;">Falar pelo WhatsApp</a>
+                
+                <p style="font-size: 0.8rem; color: var(--emerald-100); margin-top: 1rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+                    Ao clicar, você será redirecionado para o WhatsApp. Suas informações são tratadas conforme nossa <a href="#politica-de-privacidade" style="color: var(--white); text-decoration: underline;">Política de Privacidade</a> e o sigilo profissional do CRP.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="font-weight: 700; font-size: 1.2rem; color: var(--stone-800); margin-bottom: 0.5rem;">Elisangela Diogo | Psicóloga Clínica</p>
+            <p>CRP: 06/187909</p>
+            
+            <div class="footer-nav">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre Mim</a>
+                <a href="#politica-de-privacidade">Política de Privacidade</a>
+                <a href="https://www.instagram.com/elisangeladiogopsi/" target="_blank">Instagram</a>
+                <a href="mailto:elisangeladiogo.psicologia@gmail.com">E-mail</a>
+            </div>
+
+            <div style="border-top: 1px solid var(--stone-200); padding-top: 3rem; margin-top: 2rem;">
+                <p style="font-size: 0.8rem; color: var(--stone-600); max-width: 650px; margin: 0 auto 2.5rem; line-height: 1.6;">
+                    A psicoterapia é um processo de cuidado e não se destina a emergências. Em caso de crise, procure o serviço de saúde mais próximo ou ligue para o <strong>CVV (Centro de Valorização da Vida) no número 188</strong>.
+                </p>
+
+                <p style="font-size: 0.65rem; color: var(--stone-500); font-style: italic; max-width: 850px; margin: 0 auto; line-height: 1.5;">
+                    <strong>Privacidade:</strong> Este site utiliza cookies para melhorar sua experiência. As informações enviadas via WhatsApp são de uso exclusivo para agendamento de consultas e protegidas pelo sigilo profissional (Código de Ética do Psicólogo) e pela LGPD.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="floating-footer">
+        <a href="https://wa.me/5511965762304" target="_blank" class="float-btn" style="color: var(--emerald-700); font-weight: 600; text-decoration: none;">WhatsApp</a>
+        <a href="https://www.instagram.com/elisangeladiogopsi/" target="_blank" class="float-btn" style="color: var(--stone-600); font-weight: 600; text-decoration: none;">Instagram</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            // Fecha o menu mobile ao clicar em um link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            
+            menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+            
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+            });
+            
+            const sections = document.querySelectorAll('.fade-in-section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            sections.forEach(s => observer.observe(s));
+        });
+    </script>
+</body>
+</html>
