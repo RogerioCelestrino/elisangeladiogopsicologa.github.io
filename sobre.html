@@ -18,7 +18,11 @@
             <nav class="desktop-nav">
                 <a href="index.html">Início</a>
                 <a href="sobre.html" style="color: var(--emerald-700);">Quem Sou Eu</a>
+                <a href="index.html#como-funciona">Como Funciona</a>
                 <a href="politica-de-privacidade.html">Privacidade</a>
+                <a href="https://www.instagram.com/elisangeladiogopsi/" target="_blank" class="instagram-icon" aria-label="Instagram">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
                 <a href="https://wa.me/5511965762304" target="_blank" class="contact-cta">Agendar Conversa</a>
             </nav>
             <button id="menu-btn" style="background:none; border:none; cursor:pointer; color: var(--stone-800);">
@@ -28,6 +32,7 @@
         <div id="mobile-menu">
             <a href="index.html">Início</a>
             <a href="sobre.html">Quem Sou Eu</a>
+            <a href="index.html#como-funciona">Como Funciona</a>
             <a href="politica-de-privacidade.html">Privacidade</a>
             <a href="https://wa.me/5511965762304" target="_blank" class="contact-cta" style="margin-top:1rem">Agendar Conversa</a>
         </div>
@@ -70,7 +75,7 @@
                 <a href="mailto:elisangeladiogo.psicologia@gmail.com">E-mail</a>
             </div>
             <div style="border-top: 1px solid var(--stone-200); padding-top: 3rem; margin-top: 2rem;">
-                <p style="font-size: 0.8rem; color: var(--stone-600); max-width: 650px; margin: 0 auto 2.5rem; line-height: 1.6;">A psicoterapia é um processo de cuidado e não se destina a emergências. Em caso de crise, ligue para o <strong>CVV no número 188</strong>.</p>
+                <p style="font-size: 0.8rem; color: var(--stone-600); max-width: 650px; margin: 0 auto 2.5rem; line-height: 1.6;">A psicoterapia é um processo de cuidado e não se destina a emergências. Em caso de crise, procure o serviço de saúde mais próximo ou ligue para o <strong>CVV no número 188</strong>.</p>
             </div>
         </div>
     </footer>
@@ -79,7 +84,11 @@
         document.addEventListener('DOMContentLoaded', function() {
             const menuBtn = document.getElementById('menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            
             menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+            mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('active')));
+            
             setTimeout(() => document.querySelector('.fade-in-section').classList.add('is-visible'), 100);
         });
     </script>
