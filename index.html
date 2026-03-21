@@ -293,7 +293,8 @@
             line-height: 1; 
             margin-bottom: 1rem; 
         }
-        .step-item h4 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        /* CORREÇÃO ACESSIBILIDADE: h4 alterado para h3 para manter a hierarquia correta após o h2 */
+        .step-item h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
         .step-item p { color: var(--text-muted); font-size: 0.95rem; }
 
         /* =========================================
@@ -398,7 +399,7 @@
     
     <header id="main-header">
         <div class="container header-content">
-            <a href="#inicio" class="logo">Elisangela Diogo</a>
+            <a href="#inicio" class="logo" aria-label="Voltar à página inicial">Elisangela Diogo</a>
             
             <nav class="desktop-nav">
                 <a href="#inicio">Início</a>
@@ -406,10 +407,11 @@
                 <a href="#como-funciona">Como Funciona</a>
                 <a href="#depoimentos">Depoimentos</a>
                 <a href="#privacidade">Privacidade</a>
-                <a href="https://wa.me/5511965762304" target="_blank" rel="noopener noreferrer" class="btn-outline">Agendar Sessão</a>
+                <!-- CORREÇÃO ACESSIBILIDADE: aria-label adicionado -->
+                <a href="https://wa.me/5511965762304" target="_blank" rel="noopener noreferrer" class="btn-outline" aria-label="Agendar sessão de terapia pelo WhatsApp">Agendar Sessão</a>
             </nav>
 
-            <button id="menu-btn" aria-label="Abrir menu">
+            <button id="menu-btn" aria-label="Abrir menu de navegação">
                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
@@ -420,7 +422,8 @@
             <a href="#como-funciona" onclick="closeMenu();">Como Funciona</a>
             <a href="#depoimentos" onclick="closeMenu();">Depoimentos</a>
             <a href="#privacidade" onclick="closeMenu();">Privacidade</a>
-            <a href="https://wa.me/5511965762304" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 500;">Agendar no WhatsApp</a>
+            <!-- CORREÇÃO ACESSIBILIDADE: aria-label adicionado -->
+            <a href="https://wa.me/5511965762304" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 500;" aria-label="Agendar sessão de terapia pelo WhatsApp">Agendar no WhatsApp</a>
         </div>
     </header>
 
@@ -436,7 +439,6 @@
                     <div class="hero-text">
                         <span class="badge">Psicóloga Clínica • CRP 06/187909</span>
                         
-                        <!-- NOVOS TEXTOS AQUI -->
                         <h1 class="font-serif">Por fora você dá conta de tudo.<br>Mas por dentro… algo não está bem.</h1>
                         
                         <p>Se sua cabeça não para, o cansaço virou rotina ou a pressão está constante, a terapia pode te ajudar a entender esse momento e encontrar novas formas de lidar com ele.</p>
@@ -445,11 +447,11 @@
                             <p><strong>Eu conheço essa pressão de perto.</strong> Já vivi um burnout trabalhando em grandes empresas. Hoje ajudo pessoas que sentem que estão no limite — ou próximas dele.</p>
                         </div>
                         
-                        <a href="https://wa.me/5511965762304" target="_blank" rel="noopener noreferrer" class="btn-primary">Entrar em contato</a>
+                        <!-- CORREÇÃO ACESSIBILIDADE: aria-label adicionado -->
+                        <a href="https://wa.me/5511965762304" target="_blank" rel="noopener noreferrer" class="btn-primary" aria-label="Entrar em contacto com a psicóloga pelo WhatsApp">Entrar em contato</a>
                     </div>
                     
                     <div class="hero-img-cont">
-                        <!-- IMAGEM OTIMIZADA PARA LCP (WebP + width/height + fetchpriority) -->
                         <img 
                             src="img/Elisangela.webp" 
                             alt="Elisangela Diogo" 
@@ -500,7 +502,6 @@
             <div class="container">
                 <div class="about-grid fade-in-section">
                     <div>
-                        <!-- IMAGEM CORRIGIDA COM PROPORÇÃO REAL (evita distorção e ajuda no pagespeed) -->
                         <img src="img/perfil.webp" alt="Elisangela Diogo - Sobre mim" class="about-img" width="400" height="550" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600'; this.onerror='';">
                     </div>
                     <div class="about-text">
@@ -531,17 +532,20 @@
                 <div class="steps-grid">
                     <div class="step-item">
                         <div class="step-number">01</div>
-                        <h4>Agendamento</h4>
+                        <!-- CORREÇÃO ACESSIBILIDADE: Hierarquia corrigida de h4 para h3 -->
+                        <h3>Agendamento</h3>
                         <p>Você entra em contato pelo WhatsApp e definimos o melhor horário para nossa primeira conversa.</p>
                     </div>
                     <div class="step-item">
                         <div class="step-number">02</div>
-                        <h4>A Sessão</h4>
+                        <!-- CORREÇÃO ACESSIBILIDADE: Hierarquia corrigida de h4 para h3 -->
+                        <h3>A Sessão</h3>
                         <p>Nossos encontros ocorrem por videochamada em uma plataforma estável, segura e sigilosa.</p>
                     </div>
                     <div class="step-item">
                         <div class="step-number">03</div>
-                        <h4>O Acolhimento</h4>
+                        <!-- CORREÇÃO ACESSIBILIDADE: Hierarquia corrigida de h4 para h3 -->
+                        <h3>O Acolhimento</h3>
                         <p>Através da Abordagem Centrada na Pessoa, criamos um espaço só seu para refletir e ressignificar.</p>
                     </div>
                 </div>
@@ -553,7 +557,8 @@
             <div class="container">
                 <h2 class="font-serif">Sua jornada de cuidado pode começar hoje.</h2>
                 <p style="margin-bottom: 3rem; font-size: 1.1rem; opacity: 0.8;">Agende uma conversa inicial e dê o primeiro passo.</p>
-                <a href="https://wa.me/5511965762304" target="_blank" rel="noopener noreferrer" class="btn-primary">Falar pelo WhatsApp</a>
+                <!-- CORREÇÃO ACESSIBILIDADE: aria-label adicionado -->
+                <a href="https://wa.me/5511965762304" target="_blank" rel="noopener noreferrer" class="btn-primary" aria-label="Iniciar contacto pelo WhatsApp">Falar pelo WhatsApp</a>
                 <p class="disclaimer">Suas informações são tratadas com total sigilo profissional, conforme o Código de Ética do Psicólogo e a LGPD.</p>
             </div>
         </section>
@@ -596,7 +601,8 @@
                 </div>
 
                 <div class="text-center" style="margin-top: 4rem;">
-                    <a href="https://wa.me/5511965762304" target="_blank" rel="noopener noreferrer" class="btn-primary">Agendar minha conversa inicial</a>
+                    <!-- CORREÇÃO ACESSIBILIDADE: aria-label adicionado -->
+                    <a href="https://wa.me/5511965762304" target="_blank" rel="noopener noreferrer" class="btn-primary" aria-label="Agendar conversa inicial pelo WhatsApp">Agendar minha conversa inicial</a>
                 </div>
             </div>
         </section>
@@ -642,8 +648,10 @@
                 <a href="#inicio">Início</a>
                 <a href="#depoimentos">Depoimentos</a>
                 <a href="#privacidade">Política de Privacidade</a>
-                <a href="https://www.instagram.com/elisangeladiogopsi/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="mailto:elisangeladiogo.psicologia@gmail.com">E-mail</a>
+                <!-- CORREÇÃO ACESSIBILIDADE: aria-label adicionado -->
+                <a href="https://www.instagram.com/elisangeladiogopsi/" target="_blank" rel="noopener noreferrer" aria-label="Visitar a página de Instagram de Elisangela Diogo">Instagram</a>
+                <!-- CORREÇÃO ACESSIBILIDADE: aria-label adicionado -->
+                <a href="mailto:elisangeladiogo.psicologia@gmail.com" aria-label="Enviar um e-mail para Elisangela Diogo">E-mail</a>
             </div>
 
             <div class="footer-bottom">
