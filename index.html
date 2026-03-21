@@ -45,6 +45,7 @@
     <meta property="og:description" content="Por fora você dá conta de tudo. Mas por dentro… algo não está bem. Encontre um espaço seguro na terapia online para lidar com a pressão.">
     <meta property="og:image" content="img/Elisangela.webp"> 
     <meta property="og:url" content="https://elisangeladiogopsicologa.com.br">
+    <meta name="robots" content="index, follow">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -195,35 +196,35 @@
            HERO SECTION
            ========================================= */
         #inicio { padding-top: 10rem; padding-bottom: 6rem; }
-        .hero-flex { display: flex; flex-direction: column; gap: 4rem; align-items: center; }
+        .hero-flex { display: flex; flex-direction: column; gap: 2.5rem; align-items: center; }
         .hero-text { flex: 1; text-align: center; }
         
         /* Ajustes específicos do novo título */
-        .hero-text h1 { font-size: 2.5rem; margin-bottom: 1.2rem; }
+        .hero-text h1 { font-size: 2rem; margin-bottom: 1rem; line-height: 1.25; }
         
         .hero-text > p { 
-            font-size: 1.1rem; 
+            font-size: 1.05rem; 
             color: var(--text-muted); 
             max-width: 600px; 
-            margin: 0 auto 2rem; 
+            margin: 0 auto 1.5rem; 
         }
 
         /* Bloco de conexão adicionado */
         .connection-block {
             background: var(--bg-alt);
             border-left: 4px solid var(--accent);
-            padding: 1.2rem 1.5rem;
+            padding: 1rem 1.2rem;
             border-radius: 0 6px 6px 0;
-            margin: 0 auto 2.5rem;
+            margin: 0 auto 2rem;
             max-width: 600px;
             text-align: left;
             box-shadow: 0 4px 15px rgba(0,0,0,0.02);
         }
         .connection-block p {
             margin: 0;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: var(--text-dark);
-            line-height: 1.6;
+            line-height: 1.5;
         }
         
         /* Estilo elegante para imagem (Arco) */
@@ -342,19 +343,37 @@
         .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
 
         /* =========================================
+           AVISO DE COOKIES (LGPD)
+           ========================================= */
+        #cookie-banner {
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: var(--text-dark); color: var(--white);
+            padding: 1rem; text-align: center; z-index: 9999;
+            font-size: 0.85rem; display: none;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+        }
+        #cookie-banner p { margin: 0 0 0.5rem 0; display: inline-block; margin-right: 1rem; }
+        #cookie-banner a { color: var(--accent); text-decoration: underline; }
+        #cookie-banner button {
+            background: var(--accent); color: var(--white); border: none;
+            padding: 0.4rem 1.2rem; border-radius: 4px; cursor: pointer; font-weight: 500;
+        }
+
+        /* =========================================
            RESPONSIVIDADE (Desktop)
            ========================================= */
         @media (min-width: 768px) {
             nav.desktop-nav { display: flex; }
             #menu-btn { display: none; }
             
-            .hero-flex { flex-direction: row; text-align: left; }
+            .hero-flex { flex-direction: row; text-align: left; gap: 4rem; }
             .hero-text { text-align: left; padding-right: 2rem; }
             
             /* Ajustes responsivos para os novos textos */
-            .hero-text h1 { font-size: 3.2rem; }
-            .hero-text > p { margin: 0 0 2rem 0; }
-            .connection-block { margin: 0 0 2.5rem 0; }
+            .hero-text h1 { font-size: 3.2rem; margin-bottom: 1.2rem; }
+            .hero-text > p { margin: 0 0 2rem 0; font-size: 1.1rem; }
+            .connection-block { margin: 0 0 2.5rem 0; padding: 1.2rem 1.5rem; }
+            .connection-block p { font-size: 0.95rem; }
             
             .about-grid { grid-template-columns: 4fr 6fr; gap: 5rem; }
             .steps-grid { grid-template-columns: repeat(3, 1fr); gap: 4rem; }
@@ -369,15 +388,15 @@
     
     <header id="main-header">
         <div class="container header-content">
-            <a href="#" onclick="switchView('main'); return false;" class="logo">Elisangela Diogo</a>
+            <a href="#inicio" class="logo">Elisangela Diogo</a>
             
             <nav class="desktop-nav">
-                <a href="#inicio" onclick="switchView('main')">Início</a>
-                <a href="#sobre" onclick="switchView('main')">Sobre</a>
-                <a href="#como-funciona" onclick="switchView('main')">Como Funciona</a>
-                <a href="#" onclick="switchView('depoimentos'); return false;">Depoimentos</a>
-                <a href="#" onclick="switchView('privacy'); return false;">Privacidade</a>
-                <a href="https://wa.me/5511965762304" target="_blank" class="btn-outline">Agendar Sessão</a>
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#privacidade">Privacidade</a>
+                <a href="https://wa.me/5511965762304" target="_blank" rel="noopener noreferrer" class="btn-outline">Agendar Sessão</a>
             </nav>
 
             <button id="menu-btn" aria-label="Abrir menu">
@@ -386,12 +405,12 @@
         </div>
         
         <div id="mobile-menu">
-            <a href="#inicio" onclick="switchView('main'); closeMenu();">Início</a>
-            <a href="#sobre" onclick="switchView('main'); closeMenu();">Sobre Mim</a>
-            <a href="#como-funciona" onclick="switchView('main'); closeMenu();">Como Funciona</a>
-            <a href="#" onclick="switchView('depoimentos'); closeMenu(); return false;">Depoimentos</a>
-            <a href="#" onclick="switchView('privacy'); closeMenu(); return false;">Privacidade</a>
-            <a href="https://wa.me/5511965762304" target="_blank" style="color: var(--accent); font-weight: 500;">Agendar no WhatsApp</a>
+            <a href="#inicio" onclick="closeMenu();">Início</a>
+            <a href="#sobre" onclick="closeMenu();">Sobre Mim</a>
+            <a href="#como-funciona" onclick="closeMenu();">Como Funciona</a>
+            <a href="#depoimentos" onclick="closeMenu();">Depoimentos</a>
+            <a href="#privacidade" onclick="closeMenu();">Privacidade</a>
+            <a href="https://wa.me/5511965762304" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 500;">Agendar no WhatsApp</a>
         </div>
     </header>
 
@@ -416,7 +435,7 @@
                             <p><strong>Eu conheço essa pressão de perto.</strong> Já vivi um burnout trabalhando em grandes empresas. Hoje ajudo pessoas que sentem que estão no limite — ou próximas dele.</p>
                         </div>
                         
-                        <a href="https://wa.me/5511965762304" target="_blank" class="btn-primary">Entrar em contato</a>
+                        <a href="https://wa.me/5511965762304" target="_blank" rel="noopener noreferrer" class="btn-primary">Entrar em contato</a>
                     </div>
                     
                     <div class="hero-img-cont">
@@ -523,7 +542,7 @@
             <div class="container">
                 <h2 class="font-serif">Sua jornada de cuidado pode começar hoje.</h2>
                 <p style="margin-bottom: 3rem; font-size: 1.1rem; opacity: 0.8;">Agende uma conversa inicial e dê o primeiro passo.</p>
-                <a href="https://wa.me/5511965762304" target="_blank" class="btn-primary">Falar pelo WhatsApp</a>
+                <a href="https://wa.me/5511965762304" target="_blank" rel="noopener noreferrer" class="btn-primary">Falar pelo WhatsApp</a>
                 <p class="disclaimer">Suas informações são tratadas com total sigilo profissional, conforme o Código de Ética do Psicólogo e a LGPD.</p>
             </div>
         </section>
@@ -547,26 +566,26 @@
                     <div class="testimonial-card">
                         <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                         <p class="testimonial-text">"A terapia me salvou e me salva todo dia. Obrigada por ser tão gentil e paciente a cada sessão... no mundo lá fora já somos tão cobrados que precisamos de alguém que nos acolha e nos auxilie a descobrir o que estamos sentindo."</p>
-                        <p class="testimonial-author">— A. C.</p>
+                        <p class="testimonial-author">— A. C. B.</p>
                     </div>
                     
                     <!-- Depoimento 2 -->
                     <div class="testimonial-card">
                         <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                         <p class="testimonial-text">"A Eli é uma profissional incrível que me ajudou a passar por diversos processos na minha vida profissional, acadêmica e pessoal. É um ser humano empático que se empenha 300% para te ajudar sempre, tanto nos momentos felizes quanto nos mais difíceis."</p>
-                        <p class="testimonial-author">— M. S.</p>
+                        <p class="testimonial-author">— M. S. R. L.</p>
                     </div>
                     
                     <!-- Depoimento 3 -->
                     <div class="testimonial-card">
                         <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                         <p class="testimonial-text">"Você participou de uma importante etapa da minha vida e soube me dar muito alento, muito carinho. Você é uma psicóloga incrível e uma pessoa boa, bacana e que transmite muita confiança!! Que Deus te abençoe sempre!"</p>
-                        <p class="testimonial-author">— J. F.</p>
+                        <p class="testimonial-author">— J. F. M.</p>
                     </div>
                 </div>
 
                 <div class="text-center" style="margin-top: 4rem;">
-                    <a href="https://wa.me/5511965762304" target="_blank" class="btn-primary">Agendar minha conversa inicial</a>
+                    <a href="https://wa.me/5511965762304" target="_blank" rel="noopener noreferrer" class="btn-primary">Agendar minha conversa inicial</a>
                 </div>
             </div>
         </section>
@@ -609,10 +628,10 @@
             <p>Psicóloga Clínica • CRP: 06/187909</p>
             
             <div class="footer-nav">
-                <a href="#" onclick="switchView('main'); window.scrollTo(0,0); return false;">Início</a>
-                <a href="#" onclick="switchView('depoimentos'); return false;">Depoimentos</a>
-                <a href="#" onclick="switchView('privacy'); return false;">Política de Privacidade</a>
-                <a href="https://www.instagram.com/elisangeladiogopsi/" target="_blank">Instagram</a>
+                <a href="#inicio">Início</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#privacidade">Política de Privacidade</a>
+                <a href="https://www.instagram.com/elisangeladiogopsi/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href="mailto:elisangeladiogo.psicologia@gmail.com">E-mail</a>
             </div>
 
@@ -622,6 +641,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- Aviso de Cookies -->
+    <div id="cookie-banner">
+        <p>Usamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa <a href="#privacidade">Política de Privacidade</a>.</p>
+        <button onclick="acceptCookies()">Entendi</button>
+    </div>
 
     <!-- ==============================================
          SCRIPTS
@@ -639,8 +664,9 @@
             mobileMenu.classList.remove('active');
         }
 
-        // 2. Sistema de Single Page Application (Troca de Views)
-        function switchView(view) {
+        // 2. Sistema de Roteamento por Hash (SPA Otimizada para SEO/Google Ads)
+        function handleRouting() {
+            const hash = window.location.hash || '#inicio';
             const mainView = document.getElementById('main-view');
             const privacyView = document.getElementById('privacy-view');
             const depoimentosView = document.getElementById('depoimentos-view');
@@ -650,20 +676,24 @@
             privacyView.style.display = 'none';
             depoimentosView.style.display = 'none';
 
-            // Mostra a selecionada
-            if (view === 'privacy') {
+            // Mostra a selecionada baseada na URL
+            if (hash === '#privacidade') {
                 privacyView.style.display = 'block';
-            } else if (view === 'depoimentos') {
+                window.scrollTo(0, 0); // Sobe para o topo
+            } else if (hash === '#depoimentos') {
                 depoimentosView.style.display = 'block';
+                window.scrollTo(0, 0); // Sobe para o topo
             } else {
                 mainView.style.display = 'block';
+                // Deixa o navegador fazer o scroll natural para âncoras como #sobre ou #como-funciona
+                if (hash === '#inicio') window.scrollTo(0, 0); 
             }
             
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            
-            // Re-disparar o observer para animações na nova tela
             observeElements();
         }
+
+        // Escuta mudanças na URL (Navegação Segura para Google Ads)
+        window.addEventListener('hashchange', handleRouting);
 
         // 3. Animações de Fade-in ao rolar a página (Intersection Observer)
         function observeElements() {
@@ -678,20 +708,24 @@
             }, { threshold: 0.15 });
             
             sections.forEach(s => {
-                s.classList.remove('is-visible'); // Reset if switching views
+                s.classList.remove('is-visible');
                 observer.observe(s);
             });
         }
 
+        // 4. Aceite de Cookies (LGPD)
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
         // Inicializar
         document.addEventListener('DOMContentLoaded', () => {
-            // Verifica URL para abrir abas direto se o link for acessado externamente
-            if(window.location.hash === '#privacidade' || window.location.pathname.includes('politica')) {
-                switchView('privacy');
-            } else if(window.location.hash === '#depoimentos' || window.location.pathname.includes('depoimento')) {
-                switchView('depoimentos');
-            } else {
-                switchView('main');
+            handleRouting();
+            
+            // Mostrar banner de cookies se não aceito
+            if (!localStorage.getItem('cookieConsent')) {
+                document.getElementById('cookie-banner').style.display = 'block';
             }
         });
     </script>
