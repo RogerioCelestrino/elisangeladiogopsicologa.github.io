@@ -47,9 +47,14 @@
     <meta property="og:url" content="https://elisangeladiogopsicologa.com.br">
     <meta name="robots" content="index, follow">
     
+    <!-- OTIMIZAÇÃO PAGESPEED: Carregamento assíncrono das Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+    </noscript>
 
     <style>
         /* =========================================
@@ -490,7 +495,8 @@
             <div class="container">
                 <div class="about-grid fade-in-section">
                     <div>
-                        <img src="img/perfil.webp" alt="Elisangela Diogo - Sobre mim" class="about-img" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600'; this.onerror='';">
+                        <!-- OTIMIZAÇÃO PAGESPEED: Dimensões explícitas e lazy loading -->
+                        <img src="img/perfil.jpg" alt="Elisangela Diogo - Sobre mim" class="about-img" width="400" height="400" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600'; this.onerror='';">
                     </div>
                     <div class="about-text">
                         <span class="badge">Quem Sou Eu</span>
