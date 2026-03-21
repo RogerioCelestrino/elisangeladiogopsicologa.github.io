@@ -11,7 +11,7 @@
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
       "name": "Elisangela Diogo - Psicologia Clínica",
-      "image": "https://elisangeladiogopsicologa.com.br/img/Elisangela2.jpeg",
+      "image": "https://elisangeladiogopsicologa.com.br/img/Elisangela.webp",
       "@id": "https://elisangeladiogopsicologa.com.br",
       "url": "https://elisangeladiogopsicologa.com.br",
       "telephone": "+5511965762304",
@@ -39,16 +39,16 @@
     })(window,document,'script','dataLayer','GTM-NPBCTMJB');</script>
     <!-- End Google Tag Manager -->
     
-    <link rel="icon" href="img/Elisangela2.jpeg" type="image/png">
+    <link rel="icon" href="img/Elisangela.jpg" type="image/png">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Psicóloga Online | Elisangela Diogo - Terapia Humanista (ACP)">
-    <meta property="og:description" content="Alta performance não precisa significar esgotamento. Encontre um espaço seguro na terapia online para reconstruir uma relação mais saudável com sua vida e trabalho.">
-    <meta property="og:image" content="img/Elisangela2.jpeg"> 
+    <meta property="og:description" content="Por fora você dá conta de tudo. Mas por dentro… algo não está bem. Encontre um espaço seguro na terapia online para lidar com a pressão.">
+    <meta property="og:image" content="img/Elisangela.webp"> 
     <meta property="og:url" content="https://elisangeladiogopsicologa.com.br">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
     <style>
         /* =========================================
@@ -197,8 +197,34 @@
         #inicio { padding-top: 10rem; padding-bottom: 6rem; }
         .hero-flex { display: flex; flex-direction: column; gap: 4rem; align-items: center; }
         .hero-text { flex: 1; text-align: center; }
-        .hero-text h1 { font-size: 2.5rem; margin-bottom: 1.5rem; }
-        .hero-text p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 2.5rem; }
+        
+        /* Ajustes específicos do novo título */
+        .hero-text h1 { font-size: 2.5rem; margin-bottom: 1.2rem; }
+        
+        .hero-text > p { 
+            font-size: 1.1rem; 
+            color: var(--text-muted); 
+            max-width: 600px; 
+            margin: 0 auto 2rem; 
+        }
+
+        /* Bloco de conexão adicionado */
+        .connection-block {
+            background: var(--bg-alt);
+            border-left: 4px solid var(--accent);
+            padding: 1.2rem 1.5rem;
+            border-radius: 0 6px 6px 0;
+            margin: 0 auto 2.5rem;
+            max-width: 600px;
+            text-align: left;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+        .connection-block p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
         
         /* Estilo elegante para imagem (Arco) */
         .hero-img-cont { flex: 1; display: flex; justify-content: center; width: 100%; }
@@ -324,8 +350,11 @@
             
             .hero-flex { flex-direction: row; text-align: left; }
             .hero-text { text-align: left; padding-right: 2rem; }
-            .hero-text h1 { font-size: 3.5rem; }
-            .hero-text p { margin: 0 0 2.5rem 0; }
+            
+            /* Ajustes responsivos para os novos textos */
+            .hero-text h1 { font-size: 3.2rem; }
+            .hero-text > p { margin: 0 0 2rem 0; }
+            .connection-block { margin: 0 0 2.5rem 0; }
             
             .about-grid { grid-template-columns: 4fr 6fr; gap: 5rem; }
             .steps-grid { grid-template-columns: repeat(3, 1fr); gap: 4rem; }
@@ -377,13 +406,29 @@
                 <div class="hero-flex fade-in-section">
                     <div class="hero-text">
                         <span class="badge">Psicóloga Clínica • CRP 06/187909</span>
-                        <h1 class="font-serif">Alta performance não precisa significar esgotamento.</h1>
-                        <p>A rotina traz conquistas, mas muitas vezes cobra o preço da pressão e do cansaço. A psicoterapia é um espaço seguro para reconstruir uma relação mais leve com sua vida e trabalho.</p>
-                        <a href="https://wa.me/5511965762304" target="_blank" class="btn-primary">Iniciar minha jornada</a>
+                        
+                        <!-- NOVOS TEXTOS AQUI -->
+                        <h1 class="font-serif">Por fora você dá conta de tudo.<br>Mas por dentro… algo não está bem.</h1>
+                        
+                        <p>Se sua cabeça não para, o cansaço virou rotina ou a pressão está constante, a terapia pode te ajudar a entender esse momento e encontrar novas formas de lidar com ele.</p>
+                        
+                        <div class="connection-block">
+                            <p><strong>Eu conheço essa pressão de perto.</strong> Já vivi um burnout trabalhando em grandes empresas. Hoje ajudo pessoas que sentem que estão no limite — ou próximas dele.</p>
+                        </div>
+                        
+                        <a href="https://wa.me/5511965762304" target="_blank" class="btn-primary">Entrar em contato</a>
                     </div>
+                    
                     <div class="hero-img-cont">
-                        <!-- Imagem com corte em arco minimalista -->
-                        <img src="img/Elisangela2.jpeg" alt="Elisangela Diogo" class="hero-img" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600'; this.onerror='';">
+                        <!-- IMAGEM OTIMIZADA PARA LCP (WebP + width/height + fetchpriority) -->
+                        <img 
+                            src="img/Elisangela.webp" 
+                            alt="Elisangela Diogo" 
+                            class="hero-img" 
+                            width="400" 
+                            height="533" 
+                            fetchpriority="high"
+                            onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600'; this.onerror='';">
                     </div>
                 </div>
             </div>
@@ -426,7 +471,7 @@
             <div class="container">
                 <div class="about-grid fade-in-section">
                     <div>
-                        <img src="img/Perfil2.jpeg" alt="Elisangela Diogo - Sobre mim" class="about-img" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600'; this.onerror='';">
+                        <img src="img/perfil.jpg" alt="Elisangela Diogo - Sobre mim" class="about-img" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600'; this.onerror='';">
                     </div>
                     <div class="about-text">
                         <span class="badge">Quem Sou Eu</span>
@@ -501,22 +546,22 @@
                     <!-- Depoimento 1 -->
                     <div class="testimonial-card">
                         <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                        <p class="testimonial-text">"Achei que o esgotamento era o preço a pagar pelo sucesso e que eu precisava dar conta de tudo. A terapia me ensinou a estabelecer limites sem sentir culpa. Hoje me sinto no controle da minha rotina e durmo muito melhor."</p>
-                        <p class="testimonial-author">— Mariana S., Diretora de Projetos</p>
+                        <p class="testimonial-text">"A terapia me salvou e me salva todo dia. Obrigada por ser tão gentil e paciente a cada sessão... no mundo lá fora já somos tão cobrados que precisamos de alguém que nos acolha e nos auxilie a descobrir o que estamos sentindo."</p>
+                        <p class="testimonial-author">— A. C.</p>
                     </div>
                     
                     <!-- Depoimento 2 -->
                     <div class="testimonial-card">
                         <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                        <p class="testimonial-text">"Encontrei um espaço seguro onde não sou julgada pelo meu cansaço. Estava à beira de um burnout e nem percebia. As sessões online com a Elisangela se tornaram o meu momento de respirar durante a semana."</p>
-                        <p class="testimonial-author">— Ana C., Empreendedora</p>
+                        <p class="testimonial-text">"A Eli é uma profissional incrível que me ajudou a passar por diversos processos na minha vida profissional, acadêmica e pessoal. É um ser humano empático que se empenha 300% para te ajudar sempre, tanto nos momentos felizes quanto nos mais difíceis."</p>
+                        <p class="testimonial-author">— M. S.</p>
                     </div>
                     
                     <!-- Depoimento 3 -->
                     <div class="testimonial-card">
                         <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                        <p class="testimonial-text">"A cobrança excessiva estava me paralisando. Aprender a olhar para mim com a mesma empatia que sempre tive com os outros e com o meu trabalho mudou drasticamente a minha vida. Recomendo muito!"</p>
-                        <p class="testimonial-author">— Juliana F., Analista Financeira</p>
+                        <p class="testimonial-text">"Você participou de uma importante etapa da minha vida e soube me dar muito alento, muito carinho. Você é uma psicóloga incrível e uma pessoa boa, bacana e que transmite muita confiança!! Que Deus te abençoe sempre!"</p>
+                        <p class="testimonial-author">— J. F.</p>
                     </div>
                 </div>
 
