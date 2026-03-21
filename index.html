@@ -264,15 +264,20 @@
            ========================================= */
         #sobre { background-color: var(--bg-alt); }
         .about-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; }
+        
+        /* Correção para a imagem perfil.webp não ficar espremida */
         .about-img { 
             width: 100%; 
             max-width: 400px; 
-            border-radius: 4px; 
+            height: auto; /* Permite que a altura se ajuste livremente */
+            object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+            border-radius: 8px; /* Cantos arredondados mais elegantes */
             margin: 0 auto; 
             display: block;
             box-shadow: 0 15px 30px rgba(0,0,0,0.05);
             filter: sepia(10%) contrast(95%); /* Toque suave e quente na foto */
         }
+        
         .about-text p { margin-bottom: 1.2rem; color: var(--text-muted); }
         
         /* =========================================
@@ -495,8 +500,8 @@
             <div class="container">
                 <div class="about-grid fade-in-section">
                     <div>
-                        <!-- OTIMIZAÇÃO PAGESPEED: Dimensões explícitas e lazy loading -->
-                        <img src="img/perfil.webp" alt="Elisangela Diogo - Sobre mim" class="about-img" width="400" height="400" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600'; this.onerror='';">
+                        <!-- IMAGEM CORRIGIDA COM PROPORÇÃO REAL (evita distorção e ajuda no pagespeed) -->
+                        <img src="img/perfil.webp" alt="Elisangela Diogo - Sobre mim" class="about-img" width="400" height="550" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600'; this.onerror='';">
                     </div>
                     <div class="about-text">
                         <span class="badge">Quem Sou Eu</span>
