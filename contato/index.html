@@ -9,81 +9,118 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            /* Cores replicadas do seu site principal */
+            --emerald-50: #ecfdf5;
+            --emerald-100: #d1fae5;
+            --emerald-200: #a7f3d0;
+            --emerald-600: #059669;
+            --emerald-700: #047857;
+            --stone-50: #fafaf9;
+            --stone-200: #e7e5e4;
+            --stone-700: #44403c;
+            --stone-800: #292524;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(180deg, #F9E7EF 0%, #E8EDF5 100%);
+            background-color: var(--stone-50);
+            color: var(--stone-700);
             min-height: 100vh;
         }
+
+        .profile-img-container {
+            width: 130px; /* Aumentado para melhor visualização */
+            height: 130px;
+            margin: 0 auto 1.5rem;
+            position: relative;
+        }
+
         .profile-img {
-            width: 110px;
-            height: 110px;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
+            object-position: center top; /* Garante que o rosto não seja cortado */
             border-radius: 50%;
             border: 4px solid white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
+
         .link-button {
             background-color: white;
-            color: #4A5568;
+            color: var(--stone-700);
+            border: 1px solid var(--stone-200);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
+
         .link-button:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-            background-color: #FDF2F8;
-            color: #D53F8C;
+            transform: translateY(-2px);
+            border-color: var(--emerald-600);
+            color: var(--emerald-700);
+            background-color: var(--emerald-50);
+            box-shadow: 0 10px 15px -3px rgba(5, 150, 105, 0.1);
         }
+
         h1 {
             font-family: 'Playfair Display', serif;
-            color: #9B2C2C;
+            color: var(--stone-800);
         }
-        .crp-text {
-            color: #D53F8C;
+
+        .crp-badge {
+            background-color: var(--emerald-100);
+            color: var(--emerald-700);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
         }
     </style>
 </head>
 <body class="flex flex-col items-center px-6 py-12">
 
     <!-- Cabeçalho (Perfil) -->
-    <header class="text-center mb-10">
-        <div class="relative inline-block">
-            <!-- Note: Certifique-se que a pasta img existe na raiz do seu site -->
-            <img src="../img/Elisangela.webp" alt="Foto Elisangela Celestrino" class="profile-img mx-auto mb-4" onerror="this.src='https://placehold.co/300x300/FDF2F8/9B2C2C?text=Elisangela'">
+    <header class="text-center mb-10 w-full">
+        <div class="profile-img-container">
+            <img src="../img/Elisangela.webp" alt="Foto Elisangela Celestrino" class="profile-img" onerror="this.src='https://placehold.co/400x400/059669/ffffff?text=Elisangela'">
         </div>
-        <h1 class="text-2xl md:text-3xl font-bold mb-1">Elisangela Aparecida Diogo Celestrino</h1>
-        <p class="crp-text font-medium text-sm tracking-widest uppercase">CRP 06/187909</p>
+        <h1 class="text-2xl md:text-3xl font-bold mb-3 px-4">Elisangela Aparecida Diogo Celestrino</h1>
+        <span class="crp-badge font-bold py-1 px-4 rounded-full uppercase">
+            CRP 06/187909
+        </span>
     </header>
 
     <!-- Lista de Links -->
     <main class="w-full max-w-md space-y-4">
         
-        <a href="https://wa.me/5511965762304" target="_blank" class="link-button flex items-center justify-center w-full py-4 px-6 rounded-full text-center font-semibold uppercase text-xs tracking-widest border border-pink-100">
-            Agende a sua Sessão (WhatsApp)
+        <!-- WhatsApp - Destaque Principal -->
+        <a href="https://wa.me/5511965762304" target="_blank" class="link-button flex items-center justify-center w-full py-4 px-6 rounded-full text-center font-bold uppercase text-xs tracking-widest border-2 border-emerald-100">
+            Agendar Sessão (WhatsApp)
         </a>
 
+        <!-- Site Oficial -->
         <a href="https://elisangeladiogopsicologa.com.br/" target="_blank" class="link-button flex items-center justify-center w-full py-4 px-6 rounded-full text-center font-semibold uppercase text-xs tracking-widest">
             Página Web Oficial
         </a>
 
+        <!-- Instagram -->
         <a href="https://www.instagram.com/elisangeladiogopsi/" target="_blank" class="link-button flex items-center justify-center w-full py-4 px-6 rounded-full text-center font-semibold uppercase text-xs tracking-widest">
             Instagram Profissional
         </a>
 
+        <!-- LinkedIn -->
         <a href="https://www.linkedin.com/in/elisangela-aparecida-diogo-celestrino-21761ba7" target="_blank" class="link-button flex items-center justify-center w-full py-4 px-6 rounded-full text-center font-semibold uppercase text-xs tracking-widest">
             LinkedIn
         </a>
 
+        <!-- E-mail -->
         <a href="mailto:elisangeladiogo.psicologia@gmail.com" class="link-button flex items-center justify-center w-full py-4 px-6 rounded-full text-center font-semibold uppercase text-xs tracking-widest">
-            Envie um E-mail
+            Enviar E-mail
         </a>
 
     </main>
 
     <!-- Rodapé -->
     <footer class="mt-16 text-center">
-        <p class="text-gray-400 text-[10px] uppercase tracking-[0.2em]">Psicologia Humanista & Neurociências</p>
-        <p class="text-gray-400 text-[10px] mt-1 italic">Viver com mais qualidade e leveza</p>
+        <p class="text-stone-400 text-[10px] uppercase tracking-[0.2em] font-semibold">Psicologia Humanista & Neurociências</p>
+        <p class="text-emerald-600 text-[10px] mt-2 italic">Cuidado emocional com qualidade e leveza</p>
     </footer>
 
 </body>
