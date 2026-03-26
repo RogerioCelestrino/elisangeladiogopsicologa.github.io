@@ -168,7 +168,7 @@
             height: auto; 
             aspect-ratio: 3/4; 
             object-fit: cover; 
-            object-position: center 20%; /* Ajuste para não cortar o topo da cabeça */
+            object-position: center 20%; 
             border-radius: 200px 200px 0 0; 
             box-shadow: 0 20px 40px rgba(0,0,0,0.06); 
         }
@@ -182,19 +182,6 @@
         .about-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; }
         .about-img { width: 100%; max-width: 400px; height: auto; object-fit: cover; border-radius: 8px; margin: 0 auto; display: block; box-shadow: 0 15px 30px rgba(0,0,0,0.05); filter: sepia(10%) contrast(95%); }
         .about-text p { margin-bottom: 1.2rem; color: var(--text-muted); }
-        
-        /* Estilo das Formações (Nova Seção) */
-        .tag-container { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-top: 2rem; }
-        .tag { 
-            background: var(--white); 
-            border: 1px solid var(--border-light); 
-            padding: 0.5rem 1rem; 
-            border-radius: 999px; 
-            font-size: 0.85rem; 
-            color: var(--text-muted);
-            transition: var(--transition);
-        }
-        .tag:hover { border-color: var(--accent); color: var(--accent); background: var(--bg-main); }
 
         .steps-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; }
         .step-item { text-align: left; }
@@ -265,7 +252,6 @@
                 <a href="#depoimentos">Depoimentos</a>
                 <a href="#privacidade">Privacidade</a>
                 
-                <!-- Ícone Instagram na Barra Superior -->
                 <a href="https://www.instagram.com/elisangeladiogopsi/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Siga no Instagram">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                 </a>
@@ -295,7 +281,6 @@
     </header>
 
     <main id="main-view">
-        <!-- Seção Hero -->
         <section id="inicio">
             <div class="container">
                 <div class="hero-flex fade-in-section">
@@ -311,35 +296,6 @@
                     <div class="hero-img-cont">
                         <img src="img/Elisangela.webp" alt="Elisangela Diogo" class="hero-img" width="400" height="533" fetchpriority="high" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600'; this.onerror='';">
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Expertise e Formação (Recuperando os dados originais) -->
-        <section id="formacao" class="fade-in-section" style="background: var(--white); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
-            <div class="container">
-                <div class="section-header">
-                    <span class="badge">Qualificações</span>
-                    <h2 class="font-serif">Especialidades e Áreas de Atendimento</h2>
-                    <p>Uma base sólida em ciência e humanismo para oferecer o melhor cuidado emocional.</p>
-                </div>
-                <div class="tag-container">
-                    <span class="tag">Pós-Graduação em Psicopedagogia e Neurociências</span>
-                    <span class="tag">Abordagem Humanista ACP</span>
-                    <span class="tag">Tanatologia e Manejo do Luto</span>
-                    <span class="tag">Luto por Suicídio</span>
-                    <span class="tag">Transtorno de Personalidade Borderline</span>
-                    <span class="tag">Manejo Lúdico (Infância à Velhice)</span>
-                    <span class="tag">Transtornos de Humor e Ansiedade</span>
-                    <span class="tag">Síndrome de Burnout</span>
-                    <span class="tag">TOC e Síndrome do Pânico</span>
-                    <span class="tag">Segurança Psicológica no Trabalho</span>
-                    <span class="tag">Sexualidade Humana e LGBTQIAPN+</span>
-                    <span class="tag">Transtornos Alimentares</span>
-                    <span class="tag">Relações Amorosas</span>
-                    <span class="tag">Esquizofrenia</span>
-                    <span class="tag">Desenvolvimento de Competências Emocionais</span>
-                    <span class="tag">Plantão Psicológico (Vítimas de Violência)</span>
                 </div>
             </div>
         </section>
